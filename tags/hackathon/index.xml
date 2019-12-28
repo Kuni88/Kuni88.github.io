@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackathon | Kunihiro Takeoka</title>
+    <link>http://kuni88.github.io/tags/hackathon/</link>
+      <atom:link href="http://kuni88.github.io/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hackathon</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2019 12:00:00 +0900</lastBuildDate>
+    <image>
+      <url>http://kuni88.github.io/img/icon-192.png</url>
+      <title>Hackathon</title>
+      <link>http://kuni88.github.io/tags/hackathon/</link>
+    </image>
+    
+    <item>
+      <title>Insticker</title>
+      <link>http://kuni88.github.io/project/insticker/</link>
+      <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
+      <guid>http://kuni88.github.io/project/insticker/</guid>
+      <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
+This system works with a laptop PC and a cutting plotter.
+Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

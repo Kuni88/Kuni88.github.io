@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Kunihiro Takeoka</title>
+    <link>http://kuni88.github.io/publication_types/1/</link>
+      <atom:link href="http://kuni88.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Feb 2020 11:30:37 +0900</lastBuildDate>
+    <image>
+      <url>http://kuni88.github.io/img/icon-192.png</url>
+      <title>1</title>
+      <link>http://kuni88.github.io/publication_types/1/</link>
+    </image>
+    
+    <item>
+      <title>Learning with Unsure Responses</title>
+      <link>http://kuni88.github.io/publication/aaai2020-unsure/</link>
+      <pubDate>Fri, 07 Feb 2020 11:30:37 +0900</pubDate>
+      <guid>http://kuni88.github.io/publication/aaai2020-unsure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meimei: An Efficient Probabilistic Approach for Semantically Annotating Tables</title>
+      <link>http://kuni88.github.io/publication/aaai2019-meimei/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://kuni88.github.io/publication/aaai2019-meimei/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
