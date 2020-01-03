@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kunihiro Takeoka</title>
-    <link>http://kuni88.github.io/</link>
-      <atom:link href="http://kuni88.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kuni88.github.io/</link>
+      <atom:link href="https://kuni88.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Kunihiro Takeoka</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Feb 2020 11:30:37 +0900</lastBuildDate>
     <image>
-      <url>http://kuni88.github.io/img/icon-192.png</url>
+      <url>https://kuni88.github.io/img/icon-192.png</url>
       <title>Kunihiro Takeoka</title>
-      <link>http://kuni88.github.io/</link>
+      <link>https://kuni88.github.io/</link>
     </image>
     
     <item>
       <title>Learning with Unsure Responses</title>
-      <link>http://kuni88.github.io/publication/aaai2020-unsure/</link>
+      <link>https://kuni88.github.io/publication/aaai2020-unsure/</link>
       <pubDate>Fri, 07 Feb 2020 11:30:37 +0900</pubDate>
-      <guid>http://kuni88.github.io/publication/aaai2020-unsure/</guid>
+      <guid>https://kuni88.github.io/publication/aaai2020-unsure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Insticker</title>
-      <link>http://kuni88.github.io/project/insticker/</link>
+      <link>https://kuni88.github.io/project/insticker/</link>
       <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>http://kuni88.github.io/project/insticker/</guid>
+      <guid>https://kuni88.github.io/project/insticker/</guid>
       <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
 Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -33,17 +33,17 @@ Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&
     
     <item>
       <title>Meimei: An Efficient Probabilistic Approach for Semantically Annotating Tables</title>
-      <link>http://kuni88.github.io/publication/aaai2019-meimei/</link>
+      <link>https://kuni88.github.io/publication/aaai2019-meimei/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://kuni88.github.io/publication/aaai2019-meimei/</guid>
+      <guid>https://kuni88.github.io/publication/aaai2019-meimei/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HELLO WORLD!</title>
-      <link>http://kuni88.github.io/project/hello-world/</link>
+      <link>https://kuni88.github.io/project/hello-world/</link>
       <pubDate>Sat, 05 Nov 2016 15:26:44 +0900</pubDate>
-      <guid>http://kuni88.github.io/project/hello-world/</guid>
+      <guid>https://kuni88.github.io/project/hello-world/</guid>
       <description>&lt;p&gt;HELLO WORLD! is a web application for pair programming and video meeting. Pair programming is often used in education for programming, however, it is difficult to find a good teacher in your neighborhood. HELLO WORLD! helps them to do pair programming online.&lt;/p&gt;
 &lt;p&gt;Features:&lt;/p&gt;
 &lt;ul&gt;

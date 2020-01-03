@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects | Kunihiro Takeoka</title>
-    <link>http://kuni88.github.io/project/</link>
-      <atom:link href="http://kuni88.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kuni88.github.io/project/</link>
+      <atom:link href="https://kuni88.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2019 12:00:00 +0900</lastBuildDate>
     <image>
-      <url>http://kuni88.github.io/img/icon-192.png</url>
+      <url>https://kuni88.github.io/img/icon-192.png</url>
       <title>Projects</title>
-      <link>http://kuni88.github.io/project/</link>
+      <link>https://kuni88.github.io/project/</link>
     </image>
     
     <item>
       <title>Insticker</title>
-      <link>http://kuni88.github.io/project/insticker/</link>
+      <link>https://kuni88.github.io/project/insticker/</link>
       <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>http://kuni88.github.io/project/insticker/</guid>
+      <guid>https://kuni88.github.io/project/insticker/</guid>
       <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
 Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -25,9 +25,9 @@ Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&
     
     <item>
       <title>HELLO WORLD!</title>
-      <link>http://kuni88.github.io/project/hello-world/</link>
+      <link>https://kuni88.github.io/project/hello-world/</link>
       <pubDate>Sat, 05 Nov 2016 15:26:44 +0900</pubDate>
-      <guid>http://kuni88.github.io/project/hello-world/</guid>
+      <guid>https://kuni88.github.io/project/hello-world/</guid>
       <description>&lt;p&gt;HELLO WORLD! is a web application for pair programming and video meeting. Pair programming is often used in education for programming, however, it is difficult to find a good teacher in your neighborhood. HELLO WORLD! helps them to do pair programming online.&lt;/p&gt;
 &lt;p&gt;Features:&lt;/p&gt;
 &lt;ul&gt;
