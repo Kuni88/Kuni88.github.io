@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shin-GakuenG | Kunihiro Takeoka</title>
+    <link>https://kuni88.github.io/authors/shin-gakueng/</link>
+      <atom:link href="https://kuni88.github.io/authors/shin-gakueng/index.xml" rel="self" type="application/rss+xml" />
+    <description>Shin-GakuenG</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kuni88.github.io/img/icon-192.png</url>
+      <title>Shin-GakuenG</title>
+      <link>https://kuni88.github.io/authors/shin-gakueng/</link>
+    </image>
+    
+    <item>
+      <title>Yotta Free</title>
+      <link>https://kuni88.github.io/project/yotta_free/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://kuni88.github.io/project/yotta_free/</guid>
+      <description>&lt;p&gt;Yotta Free is a Mac app for making users look drunk. Using both this app and a video conferencing app, you can enjoy online drinking parties without alcohol.&lt;br&gt;
+Yotta Free changes your face and voice to look drunk in realtime. This app is technically based on face segmentation (ECCV 2018) and vocoder.
+This app developed in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34;&gt;&lt;em&gt;HackDay 2021&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
