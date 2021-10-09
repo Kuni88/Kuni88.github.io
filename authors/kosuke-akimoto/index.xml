@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kosuke Akimoto | Kunihiro Takeoka</title>
+    <link>https://kuni88.github.io/authors/kosuke-akimoto/</link>
+      <atom:link href="https://kuni88.github.io/authors/kosuke-akimoto/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kosuke Akimoto</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kuni88.github.io/img/icon-192.png</url>
+      <title>Kosuke Akimoto</title>
+      <link>https://kuni88.github.io/authors/kosuke-akimoto/</link>
+    </image>
+    
+    <item>
+      <title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title>
+      <link>https://kuni88.github.io/publication/takeoka-etal-2021-low/</link>
+      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://kuni88.github.io/publication/takeoka-etal-2021-low/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
