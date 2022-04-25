@@ -5,12 +5,20 @@
     <link>https://kuni88.github.io/tags/</link>
       <atom:link href="https://kuni88.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Mar 2022 12:00:00 +0900</lastBuildDate>
     <image>
       <url>https://kuni88.github.io/img/icon-192.png</url>
       <title>Tags</title>
       <link>https://kuni88.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>Competition</title>
+      <link>https://kuni88.github.io/tags/competition/</link>
+      <pubDate>Fri, 11 Mar 2022 12:00:00 +0900</pubDate>
+      <guid>https://kuni88.github.io/tags/competition/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Information Extraction</title>

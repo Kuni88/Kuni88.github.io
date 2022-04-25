@@ -5,12 +5,23 @@
     <link>https://kuni88.github.io/</link>
       <atom:link href="https://kuni88.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Kunihiro Takeoka</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Mar 2022 12:00:00 +0900</lastBuildDate>
     <image>
       <url>https://kuni88.github.io/img/icon-192.png</url>
       <title>Kunihiro Takeoka</title>
       <link>https://kuni88.github.io/</link>
     </image>
+    
+    <item>
+      <title>👑 1st place Japanese Quiz AI competition, AIO 2nd</title>
+      <link>https://kuni88.github.io/project/aio2nd/</link>
+      <pubDate>Fri, 11 Mar 2022 12:00:00 +0900</pubDate>
+      <guid>https://kuni88.github.io/project/aio2nd/</guid>
+      <description>&lt;p&gt;Our team, Revo, took	1st place in the Japanese Quiz AI competition, &lt;strong&gt;AIO&lt;/strong&gt; (King of AI in Japanese) 2021-2022.
+The task of this competition is	to answer questions without using the Internet but with pre-stored information on the developers&amp;rsquo; own. We have developed RevoAI to tackle this task, and RevoAI achieved 83.9% accuracy on the test data and 1st place.
+If you want to know about the details of our approach, please contact me freely.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title>
