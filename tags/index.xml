@@ -1,48 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | Kunihiro Takeoka</title>
-    <link>https://kuni88.github.io/tags/</link>
-      <atom:link href="https://kuni88.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags | Academic</title>
+    <link>https://example.com/tags/</link>
+      <atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Mar 2022 12:00:00 +0900</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://kuni88.github.io/img/icon-192.png</url>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Tags</title>
-      <link>https://kuni88.github.io/tags/</link>
+      <link>https://example.com/tags/</link>
     </image>
-    
-    <item>
-      <title>Competition</title>
-      <link>https://kuni88.github.io/tags/competition/</link>
-      <pubDate>Fri, 11 Mar 2022 12:00:00 +0900</pubDate>
-      <guid>https://kuni88.github.io/tags/competition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Information Extraction</title>
-      <link>https://kuni88.github.io/tags/information-extraction/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/tags/information-extraction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NLP</title>
-      <link>https://kuni88.github.io/tags/nlp/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/tags/nlp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hackathon</title>
-      <link>https://kuni88.github.io/tags/hackathon/</link>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/tags/hackathon/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

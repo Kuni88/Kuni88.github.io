@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kunihiro Takeoka | Academic</title>
+    <link>https://example.com/authors/kunihiro-takeoka/</link>
+      <atom:link href="https://example.com/authors/kunihiro-takeoka/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kunihiro Takeoka</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Kunihiro Takeoka</title>
+      <link>https://example.com/authors/kunihiro-takeoka/</link>
+    </image>
+    
+    <item>
+      <title>Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering</title>
+      <link>https://example.com/publication/akimoto-etal-2023-context/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/akimoto-etal-2023-context/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title>
+      <link>https://example.com/publication/takeoka-etal-2021-low/</link>
+      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/takeoka-etal-2021-low/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quality Control for Hierarchical Classification with Incomplete Annotations</title>
+      <link>https://example.com/publication/enomoto-2021-quality/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/enomoto-2021-quality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Efficient Joinable Table Discovery in Data Lake: A High-Dimensional Similarity-Based Approach</title>
+      <link>https://example.com/publication/dong-2021-efficient/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/dong-2021-efficient/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuous top-k spatial–keyword search on dynamic objects</title>
+      <link>https://example.com/publication/dong-2020-continuous/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/dong-2020-continuous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning with Unsure Responses</title>
+      <link>https://example.com/publication/aaai-2020-unsure/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/aaai-2020-unsure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meimei: An Efficient Probabilistic Approach for Semantically Annotating Tables</title>
+      <link>https://example.com/publication/aaai-2019-meimei/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/aaai-2019-meimei/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

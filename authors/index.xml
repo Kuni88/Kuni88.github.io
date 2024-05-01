@@ -1,138 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | Kunihiro Takeoka</title>
-    <link>https://kuni88.github.io/authors/</link>
-      <atom:link href="https://kuni88.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <title>Authors | Academic</title>
+    <link>https://example.com/authors/</link>
+      <atom:link href="https://example.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Mar 2022 12:00:00 +0900</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://kuni88.github.io/img/icon-192.png</url>
+      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Authors</title>
-      <link>https://kuni88.github.io/authors/</link>
+      <link>https://example.com/authors/</link>
     </image>
-    
-    <item>
-      <title>Team Revo (Akimoto &amp; Takeoka)</title>
-      <link>https://kuni88.github.io/authors/team-revo-akimoto-takeoka/</link>
-      <pubDate>Fri, 11 Mar 2022 12:00:00 +0900</pubDate>
-      <guid>https://kuni88.github.io/authors/team-revo-akimoto-takeoka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>&lt;u&gt;**Kunihiro Takeoka**&lt;/u&gt;</title>
-      <link>https://kuni88.github.io/authors/ukunihiro-takeoka/u/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/ukunihiro-takeoka/u/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kosuke Akimoto</title>
-      <link>https://kuni88.github.io/authors/kosuke-akimoto/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/kosuke-akimoto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Masafumi Oyamada</title>
-      <link>https://kuni88.github.io/authors/masafumi-oyamada/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/masafumi-oyamada/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Masafumi Enomoto</title>
-      <link>https://kuni88.github.io/authors/masafumi-enomoto/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/masafumi-enomoto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Takeshi Okadome</title>
-      <link>https://kuni88.github.io/authors/takeshi-okadome/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/takeshi-okadome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Yuyang Dong</title>
-      <link>https://kuni88.github.io/authors/yuyang-dong/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/yuyang-dong/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chuan Xiao</title>
-      <link>https://kuni88.github.io/authors/chuan-xiao/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/chuan-xiao/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shin-GakuenG</title>
-      <link>https://kuni88.github.io/authors/shin-gakueng/</link>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/shin-gakueng/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hanxiong Chen</title>
-      <link>https://kuni88.github.io/authors/hanxiong-chen/</link>
-      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/hanxiong-chen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hiroyuki Kitagawa</title>
-      <link>https://kuni88.github.io/authors/hiroyuki-kitagawa/</link>
-      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/hiroyuki-kitagawa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jefferey Xu Yu</title>
-      <link>https://kuni88.github.io/authors/jefferey-xu-yu/</link>
-      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/jefferey-xu-yu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Team Happy</title>
-      <link>https://kuni88.github.io/authors/team-happy/</link>
-      <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>https://kuni88.github.io/authors/team-happy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shinji Nakadai</title>
-      <link>https://kuni88.github.io/authors/shinji-nakadai/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/shinji-nakadai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://kuni88.github.io/authors/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;I am a researcher at &lt;a href=&#34;https://www.nec.com/en/global/rd/labs/datascience/index.html&#34;&gt;Data Science Research Labs, NEC Corporation&lt;/a&gt;.
-My research interests include machine learning, natural language processing, and human computer interaction.&lt;/p&gt;
-</description>
-    </item>
     
   </channel>
 </rss>
