@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
-    <link>https://example.com/</link>
-      <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
+    <title>Kunihiro Takeoka</title>
+    <link>https://kuni88.github.io/</link>
+      <atom:link href="https://kuni88.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kunihiro Takeoka</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Academic</title>
-      <link>https://example.com/</link>
+      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Kunihiro Takeoka</title>
+      <link>https://kuni88.github.io/</link>
     </image>
     
     <item>
       <title>Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering</title>
-      <link>https://example.com/publication/akimoto-etal-2023-context/</link>
+      <link>https://kuni88.github.io/publication/akimoto-etal-2023-context/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/akimoto-etal-2023-context/</guid>
+      <guid>https://kuni88.github.io/publication/akimoto-etal-2023-context/</guid>
       <description></description>
     </item>
     
     <item>
       <title>1st place on AIO3rd</title>
-      <link>https://example.com/project/aio3rd/</link>
+      <link>https://kuni88.github.io/project/aio3rd/</link>
       <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/aio3rd/</guid>
+      <guid>https://kuni88.github.io/project/aio3rd/</guid>
       <description>&lt;p&gt;Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 3rd, a Japanese Quiz AI competition&lt;/a&gt; (2022/09 - 2022/12).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
 Revo has achieved 93.8% accuracy on the test set.&lt;/p&gt;
@@ -35,9 +35,9 @@ Revo has achieved 93.8% accuracy on the test set.&lt;/p&gt;
     
     <item>
       <title>1st place on AIO2nd</title>
-      <link>https://example.com/project/aio2nd/</link>
+      <link>https://kuni88.github.io/project/aio2nd/</link>
       <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/aio2nd/</guid>
+      <guid>https://kuni88.github.io/project/aio2nd/</guid>
       <description>&lt;p&gt;Our team Revo (Akimoto &amp;amp; Takeoka) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 2nd, a Japanese Quiz AI competition&lt;/a&gt; (2021/10 - 2022/03).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
 Revo has achieved 83.9% accuracy on the test set.&lt;/p&gt;
@@ -48,33 +48,33 @@ Revo has achieved 83.9% accuracy on the test set.&lt;/p&gt;
     
     <item>
       <title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title>
-      <link>https://example.com/publication/takeoka-etal-2021-low/</link>
+      <link>https://kuni88.github.io/publication/takeoka-etal-2021-low/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/takeoka-etal-2021-low/</guid>
+      <guid>https://kuni88.github.io/publication/takeoka-etal-2021-low/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality Control for Hierarchical Classification with Incomplete Annotations</title>
-      <link>https://example.com/publication/enomoto-2021-quality/</link>
+      <link>https://kuni88.github.io/publication/enomoto-2021-quality/</link>
       <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/enomoto-2021-quality/</guid>
+      <guid>https://kuni88.github.io/publication/enomoto-2021-quality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Efficient Joinable Table Discovery in Data Lake: A High-Dimensional Similarity-Based Approach</title>
-      <link>https://example.com/publication/dong-2021-efficient/</link>
+      <link>https://kuni88.github.io/publication/dong-2021-efficient/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/dong-2021-efficient/</guid>
+      <guid>https://kuni88.github.io/publication/dong-2021-efficient/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yotta Free</title>
-      <link>https://example.com/project/yotta_free/</link>
+      <link>https://kuni88.github.io/project/yotta_free/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/yotta_free/</guid>
+      <guid>https://kuni88.github.io/project/yotta_free/</guid>
       <description>&lt;p&gt;Yotta Free is a Mac app for making users look drunk.
 Using both this app and a video conferencing app, you can enjoy online drinking parties without alcohol.
 Yotta Free changes your face and voice to look drunk in real-time.
@@ -85,25 +85,25 @@ This app is developed with my friends in a one-day hackathon &lt;a href=&#34;htt
     
     <item>
       <title>Continuous top-k spatial–keyword search on dynamic objects</title>
-      <link>https://example.com/publication/dong-2020-continuous/</link>
+      <link>https://kuni88.github.io/publication/dong-2020-continuous/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/dong-2020-continuous/</guid>
+      <guid>https://kuni88.github.io/publication/dong-2020-continuous/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning with Unsure Responses</title>
-      <link>https://example.com/publication/aaai-2020-unsure/</link>
+      <link>https://kuni88.github.io/publication/aaai-2020-unsure/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/aaai-2020-unsure/</guid>
+      <guid>https://kuni88.github.io/publication/aaai-2020-unsure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Insticker</title>
-      <link>https://example.com/project/insticker/</link>
+      <link>https://kuni88.github.io/project/insticker/</link>
       <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>https://example.com/project/insticker/</guid>
+      <guid>https://kuni88.github.io/project/insticker/</guid>
       <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
 Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -112,17 +112,17 @@ Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&
     
     <item>
       <title>Meimei: An Efficient Probabilistic Approach for Semantically Annotating Tables</title>
-      <link>https://example.com/publication/aaai-2019-meimei/</link>
+      <link>https://kuni88.github.io/publication/aaai-2019-meimei/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/aaai-2019-meimei/</guid>
+      <guid>https://kuni88.github.io/publication/aaai-2019-meimei/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HELLO WORLD!</title>
-      <link>https://example.com/project/hello-world/</link>
+      <link>https://kuni88.github.io/project/hello-world/</link>
       <pubDate>Sat, 05 Nov 2016 15:26:44 +0900</pubDate>
-      <guid>https://example.com/project/hello-world/</guid>
+      <guid>https://kuni88.github.io/project/hello-world/</guid>
       <description>&lt;p&gt;HELLO WORLD! is a web application for pair programming and video meeting. Pair programming is often used in education for programming, however, it is difficult to find a good teacher in your neighborhood. HELLO WORLD! helps them to do pair programming online.&lt;/p&gt;
 &lt;p&gt;Features:&lt;/p&gt;
 &lt;ul&gt;

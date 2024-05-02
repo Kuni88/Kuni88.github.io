@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Academic</title>
-    <link>https://example.com/project/</link>
-      <atom:link href="https://example.com/project/index.xml" rel="self" type="application/rss+xml" />
+    <title>Projects | Kunihiro Takeoka</title>
+    <link>https://kuni88.github.io/project/</link>
+      <atom:link href="https://kuni88.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
-      <link>https://example.com/project/</link>
+      <link>https://kuni88.github.io/project/</link>
     </image>
     
     <item>
       <title>1st place on AIO3rd</title>
-      <link>https://example.com/project/aio3rd/</link>
+      <link>https://kuni88.github.io/project/aio3rd/</link>
       <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/aio3rd/</guid>
+      <guid>https://kuni88.github.io/project/aio3rd/</guid>
       <description>&lt;p&gt;Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 3rd, a Japanese Quiz AI competition&lt;/a&gt; (2022/09 - 2022/12).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
 Revo has achieved 93.8% accuracy on the test set.&lt;/p&gt;
@@ -27,9 +27,9 @@ Revo has achieved 93.8% accuracy on the test set.&lt;/p&gt;
     
     <item>
       <title>1st place on AIO2nd</title>
-      <link>https://example.com/project/aio2nd/</link>
+      <link>https://kuni88.github.io/project/aio2nd/</link>
       <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/aio2nd/</guid>
+      <guid>https://kuni88.github.io/project/aio2nd/</guid>
       <description>&lt;p&gt;Our team Revo (Akimoto &amp;amp; Takeoka) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 2nd, a Japanese Quiz AI competition&lt;/a&gt; (2021/10 - 2022/03).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
 Revo has achieved 83.9% accuracy on the test set.&lt;/p&gt;
@@ -40,9 +40,9 @@ Revo has achieved 83.9% accuracy on the test set.&lt;/p&gt;
     
     <item>
       <title>Yotta Free</title>
-      <link>https://example.com/project/yotta_free/</link>
+      <link>https://kuni88.github.io/project/yotta_free/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/project/yotta_free/</guid>
+      <guid>https://kuni88.github.io/project/yotta_free/</guid>
       <description>&lt;p&gt;Yotta Free is a Mac app for making users look drunk.
 Using both this app and a video conferencing app, you can enjoy online drinking parties without alcohol.
 Yotta Free changes your face and voice to look drunk in real-time.
@@ -53,9 +53,9 @@ This app is developed with my friends in a one-day hackathon &lt;a href=&#34;htt
     
     <item>
       <title>Insticker</title>
-      <link>https://example.com/project/insticker/</link>
+      <link>https://kuni88.github.io/project/insticker/</link>
       <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>https://example.com/project/insticker/</guid>
+      <guid>https://kuni88.github.io/project/insticker/</guid>
       <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
 Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -64,9 +64,9 @@ Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&
     
     <item>
       <title>HELLO WORLD!</title>
-      <link>https://example.com/project/hello-world/</link>
+      <link>https://kuni88.github.io/project/hello-world/</link>
       <pubDate>Sat, 05 Nov 2016 15:26:44 +0900</pubDate>
-      <guid>https://example.com/project/hello-world/</guid>
+      <guid>https://kuni88.github.io/project/hello-world/</guid>
       <description>&lt;p&gt;HELLO WORLD! is a web application for pair programming and video meeting. Pair programming is often used in education for programming, however, it is difficult to find a good teacher in your neighborhood. HELLO WORLD! helps them to do pair programming online.&lt;/p&gt;
 &lt;p&gt;Features:&lt;/p&gt;
 &lt;ul&gt;

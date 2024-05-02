@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kosuke Akimoto | Academic</title>
-    <link>https://example.com/authors/kosuke-akimoto/</link>
-      <atom:link href="https://example.com/authors/kosuke-akimoto/index.xml" rel="self" type="application/rss+xml" />
+    <title>Kosuke Akimoto | Kunihiro Takeoka</title>
+    <link>https://kuni88.github.io/authors/kosuke-akimoto/</link>
+      <atom:link href="https://kuni88.github.io/authors/kosuke-akimoto/index.xml" rel="self" type="application/rss+xml" />
     <description>Kosuke Akimoto</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Kosuke Akimoto</title>
-      <link>https://example.com/authors/kosuke-akimoto/</link>
+      <link>https://kuni88.github.io/authors/kosuke-akimoto/</link>
     </image>
     
     <item>
       <title>Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering</title>
-      <link>https://example.com/publication/akimoto-etal-2023-context/</link>
+      <link>https://kuni88.github.io/publication/akimoto-etal-2023-context/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/akimoto-etal-2023-context/</guid>
+      <guid>https://kuni88.github.io/publication/akimoto-etal-2023-context/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title>
-      <link>https://example.com/publication/takeoka-etal-2021-low/</link>
+      <link>https://kuni88.github.io/publication/takeoka-etal-2021-low/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/takeoka-etal-2021-low/</guid>
+      <guid>https://kuni88.github.io/publication/takeoka-etal-2021-low/</guid>
       <description></description>
     </item>
     

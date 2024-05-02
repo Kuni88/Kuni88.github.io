@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Team Happy | Academic</title>
-    <link>https://example.com/authors/team-happy/</link>
-      <atom:link href="https://example.com/authors/team-happy/index.xml" rel="self" type="application/rss+xml" />
+    <title>Team Happy | Kunihiro Takeoka</title>
+    <link>https://kuni88.github.io/authors/team-happy/</link>
+      <atom:link href="https://kuni88.github.io/authors/team-happy/index.xml" rel="self" type="application/rss+xml" />
     <description>Team Happy</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2019 12:00:00 +0900</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Team Happy</title>
-      <link>https://example.com/authors/team-happy/</link>
+      <link>https://kuni88.github.io/authors/team-happy/</link>
     </image>
     
     <item>
       <title>Insticker</title>
-      <link>https://example.com/project/insticker/</link>
+      <link>https://kuni88.github.io/project/insticker/</link>
       <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>https://example.com/project/insticker/</guid>
+      <guid>https://kuni88.github.io/project/insticker/</guid>
       <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
 Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
