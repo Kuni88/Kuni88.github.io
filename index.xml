@@ -1,138 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Kunihiro Takeoka</title>
-    <link>https://kuni88.github.io/</link>
-      <atom:link href="https://kuni88.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>Kunihiro Takeoka</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Kunihiro Takeoka</title>
-      <link>https://kuni88.github.io/</link>
-    </image>
-    
-    <item>
-      <title>Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering</title>
-      <link>https://kuni88.github.io/publication/akimoto-etal-2023-context/</link>
-      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/akimoto-etal-2023-context/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>1st place on AIO3rd</title>
-      <link>https://kuni88.github.io/project/aio3rd/</link>
-      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/project/aio3rd/</guid>
-      <description>&lt;p&gt;Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 3rd, a Japanese Quiz AI competition&lt;/a&gt; (2022/09 - 2022/12).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kunihiro Takeoka</title><link>https://kuni88.github.io/</link><atom:link href="https://kuni88.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Kunihiro Takeoka</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate><image><url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Kunihiro Takeoka</title><link>https://kuni88.github.io/</link></image><item><title>Revisiting Prompt Engineering: A Comprehensive Evaluation for LLM-based Personalized Recommendation</title><link>https://kuni88.github.io/publication/kusano-2025-recsys/</link><pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/kusano-2025-recsys/</guid><description/></item><item><title>LLM-based Query Expansion Fails for Unfamiliar and Ambiguous Queries</title><link>https://kuni88.github.io/publication/abe-2025-sigir/</link><pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/abe-2025-sigir/</guid><description/></item><item><title>Relevance, Diversity, and Exclusivity: Designing Keyword-augmentation Strategy for Zero-shot Classifiers</title><link>https://kuni88.github.io/publication/yano-2024-naacl/</link><pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/yano-2024-naacl/</guid><description/></item><item><title>Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering</title><link>https://kuni88.github.io/publication/akimoto-etal-2023-context/</link><pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/akimoto-etal-2023-context/</guid><description/></item><item><title>1st place on AIO3rd</title><link>https://kuni88.github.io/project/aio3rd/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/project/aio3rd/</guid><description>&lt;p>Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won &lt;a href="https://sites.google.com/view/project-aio/competition3" target="_blank" rel="noopener">AIO 3rd, a Japanese Quiz AI competition&lt;/a> (2022/09 - 2022/12).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
-Revo has achieved 93.8% accuracy on the test set.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/view/project-aio/competition3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI王 〜クイズAI日本一決定戦〜第3回&lt;/a&gt;にて我々のチーム レヴォ が前回に続き優勝しました．
-レヴォは93.8%の正解率(完全一致率)を達成しました．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>1st place on AIO2nd</title>
-      <link>https://kuni88.github.io/project/aio2nd/</link>
-      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/project/aio2nd/</guid>
-      <description>&lt;p&gt;Our team Revo (Akimoto &amp;amp; Takeoka) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 2nd, a Japanese Quiz AI competition&lt;/a&gt; (2021/10 - 2022/03).
+Revo has achieved 93.8% accuracy on the test set.&lt;/p>
+&lt;p>&lt;a href="https://sites.google.com/view/project-aio/competition3" target="_blank" rel="noopener">AI王 〜クイズAI日本一決定戦〜第3回&lt;/a>にて我々のチーム レヴォ が前回に続き優勝しました．
+レヴォは93.8%の正解率(完全一致率)を達成しました．&lt;/p></description></item><item><title>1st place on AIO2nd</title><link>https://kuni88.github.io/project/aio2nd/</link><pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/project/aio2nd/</guid><description>&lt;p>Our team Revo (Akimoto &amp;amp; Takeoka) won &lt;a href="https://sites.google.com/view/project-aio/competition2" target="_blank" rel="noopener">AIO 2nd, a Japanese Quiz AI competition&lt;/a> (2021/10 - 2022/03).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
-Revo has achieved 83.9% accuracy on the test set.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/view/project-aio/competition2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI王 〜クイズAI日本一決定戦〜第2回&lt;/a&gt;にて我々のチーム レヴォ が優勝しました．
-レヴォは83.9%の完全一致率を達成しました．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title>
-      <link>https://kuni88.github.io/publication/takeoka-etal-2021-low/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/takeoka-etal-2021-low/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quality Control for Hierarchical Classification with Incomplete Annotations</title>
-      <link>https://kuni88.github.io/publication/enomoto-2021-quality/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/enomoto-2021-quality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Efficient Joinable Table Discovery in Data Lake: A High-Dimensional Similarity-Based Approach</title>
-      <link>https://kuni88.github.io/publication/dong-2021-efficient/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/dong-2021-efficient/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Yotta Free</title>
-      <link>https://kuni88.github.io/project/yotta_free/</link>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/project/yotta_free/</guid>
-      <description>&lt;p&gt;Yotta Free is a Mac app for making users look drunk.
+Revo has achieved 83.9% accuracy on the test set.&lt;/p>
+&lt;p>&lt;a href="https://sites.google.com/view/project-aio/competition2" target="_blank" rel="noopener">AI王 〜クイズAI日本一決定戦〜第2回&lt;/a>にて我々のチーム レヴォ が優勝しました．
+レヴォは83.9%の完全一致率を達成しました．&lt;/p></description></item><item><title>Low-resource Taxonomy Enrichment with Pretrained Language Models</title><link>https://kuni88.github.io/publication/takeoka-etal-2021-low/</link><pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/takeoka-etal-2021-low/</guid><description/></item><item><title>Quality Control for Hierarchical Classification with Incomplete Annotations</title><link>https://kuni88.github.io/publication/enomoto-2021-quality/</link><pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/enomoto-2021-quality/</guid><description/></item><item><title>Efficient Joinable Table Discovery in Data Lake: A High-Dimensional Similarity-Based Approach</title><link>https://kuni88.github.io/publication/dong-2021-efficient/</link><pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/dong-2021-efficient/</guid><description/></item><item><title>Yotta Free</title><link>https://kuni88.github.io/project/yotta_free/</link><pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/project/yotta_free/</guid><description>&lt;p>Yotta Free is a Mac app for making users look drunk.
 Using both this app and a video conferencing app, you can enjoy online drinking parties without alcohol.
 Yotta Free changes your face and voice to look drunk in real-time.
-This app is used face segmentation &lt;a href=&#34;https://github.com/zllrunning/face-parsing.PyTorch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;face-parsing.Pytorch&lt;/a&gt; and vocoder &lt;a href=&#34;https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyWorld&lt;/a&gt; inside.
-This app is developed with my friends in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2021&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Continuous top-k spatial–keyword search on dynamic objects</title>
-      <link>https://kuni88.github.io/publication/dong-2020-continuous/</link>
-      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/dong-2020-continuous/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Learning with Unsure Responses</title>
-      <link>https://kuni88.github.io/publication/aaai-2020-unsure/</link>
-      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/aaai-2020-unsure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Insticker</title>
-      <link>https://kuni88.github.io/project/insticker/</link>
-      <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>https://kuni88.github.io/project/insticker/</guid>
-      <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
+This app is used face segmentation &lt;a href="https://github.com/zllrunning/face-parsing.PyTorch" target="_blank" rel="noopener">face-parsing.Pytorch&lt;/a> and vocoder &lt;a href="https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder" target="_blank" rel="noopener">PyWorld&lt;/a> inside.
+This app is developed with my friends in a one-day hackathon &lt;a href="https://hackday.jp/" target="_blank" rel="noopener">&lt;em>HackDay 2021&lt;/em>&lt;/a>.&lt;/p></description></item><item><title>Continuous top-k spatial–keyword search on dynamic objects</title><link>https://kuni88.github.io/publication/dong-2020-continuous/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/dong-2020-continuous/</guid><description/></item><item><title>Learning with Unsure Responses</title><link>https://kuni88.github.io/publication/aaai-2020-unsure/</link><pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/aaai-2020-unsure/</guid><description/></item><item><title>Insticker</title><link>https://kuni88.github.io/project/insticker/</link><pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate><guid>https://kuni88.github.io/project/insticker/</guid><description>&lt;p>Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
-Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Meimei: An Efficient Probabilistic Approach for Semantically Annotating Tables</title>
-      <link>https://kuni88.github.io/publication/aaai-2019-meimei/</link>
-      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/publication/aaai-2019-meimei/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HELLO WORLD!</title>
-      <link>https://kuni88.github.io/project/hello-world/</link>
-      <pubDate>Sat, 05 Nov 2016 15:26:44 +0900</pubDate>
-      <guid>https://kuni88.github.io/project/hello-world/</guid>
-      <description>&lt;p&gt;HELLO WORLD! is a web application for pair programming and video meeting. Pair programming is often used in education for programming, however, it is difficult to find a good teacher in your neighborhood. HELLO WORLD! helps them to do pair programming online.&lt;/p&gt;
-&lt;p&gt;Features:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Edit codes at the same time&lt;/li&gt;
-&lt;li&gt;Chat in video communication&lt;/li&gt;
-&lt;li&gt;Run codes in a browser&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This project is joint work with my friends in a hackathon JPHacks 2016. This is an overview of the project and its detail is &lt;a href=&#34;https://devpost.com/software/co-de&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; in Japanese.&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+Insticker project is in a one-day hackathon &lt;a href="https://hackday.jp/" target="_blank" rel="noopener">&lt;em>HackDay 2019&lt;/em>&lt;/a>.&lt;/p></description></item><item><title>Meimei: An Efficient Probabilistic Approach for Semantically Annotating Tables</title><link>https://kuni88.github.io/publication/aaai-2019-meimei/</link><pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/publication/aaai-2019-meimei/</guid><description/></item><item><title>HELLO WORLD!</title><link>https://kuni88.github.io/project/hello-world/</link><pubDate>Sat, 05 Nov 2016 15:26:44 +0900</pubDate><guid>https://kuni88.github.io/project/hello-world/</guid><description>&lt;p>HELLO WORLD! is a web application for pair programming and video meeting. Pair programming is often used in education for programming, however, it is difficult to find a good teacher in your neighborhood. HELLO WORLD! helps them to do pair programming online.&lt;/p>
+&lt;p>Features:&lt;/p>
+&lt;ul>
+&lt;li>Edit codes at the same time&lt;/li>
+&lt;li>Chat in video communication&lt;/li>
+&lt;li>Run codes in a browser&lt;/li>
+&lt;/ul>
+&lt;p>This project is joint work with my friends in a hackathon JPHacks 2016. This is an overview of the project and its detail is &lt;a href="https://devpost.com/software/co-de" target="_blank" rel="noopener">here&lt;/a> in Japanese.&lt;/p></description></item></channel></rss>

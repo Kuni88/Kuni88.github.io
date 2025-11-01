@@ -1,42 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Revo | Kunihiro Takeoka</title>
-    <link>https://kuni88.github.io/authors/revo/</link>
-      <atom:link href="https://kuni88.github.io/authors/revo/index.xml" rel="self" type="application/rss+xml" />
-    <description>Revo</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Revo</title>
-      <link>https://kuni88.github.io/authors/revo/</link>
-    </image>
-    
-    <item>
-      <title>1st place on AIO3rd</title>
-      <link>https://kuni88.github.io/project/aio3rd/</link>
-      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/project/aio3rd/</guid>
-      <description>&lt;p&gt;Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 3rd, a Japanese Quiz AI competition&lt;/a&gt; (2022/09 - 2022/12).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Revo | Kunihiro Takeoka</title><link>https://kuni88.github.io/authors/revo/</link><atom:link href="https://kuni88.github.io/authors/revo/index.xml" rel="self" type="application/rss+xml"/><description>Revo</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate><image><url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Revo</title><link>https://kuni88.github.io/authors/revo/</link></image><item><title>1st place on AIO3rd</title><link>https://kuni88.github.io/project/aio3rd/</link><pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/project/aio3rd/</guid><description>&lt;p>Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won &lt;a href="https://sites.google.com/view/project-aio/competition3" target="_blank" rel="noopener">AIO 3rd, a Japanese Quiz AI competition&lt;/a> (2022/09 - 2022/12).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
-Revo has achieved 93.8% accuracy on the test set.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/view/project-aio/competition3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI王 〜クイズAI日本一決定戦〜第3回&lt;/a&gt;にて我々のチーム レヴォ が前回に続き優勝しました．
-レヴォは93.8%の正解率(完全一致率)を達成しました．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>1st place on AIO2nd</title>
-      <link>https://kuni88.github.io/project/aio2nd/</link>
-      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/project/aio2nd/</guid>
-      <description>&lt;p&gt;Our team Revo (Akimoto &amp;amp; Takeoka) won &lt;a href=&#34;https://sites.google.com/view/project-aio/competition2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AIO 2nd, a Japanese Quiz AI competition&lt;/a&gt; (2021/10 - 2022/03).
+Revo has achieved 93.8% accuracy on the test set.&lt;/p>
+&lt;p>&lt;a href="https://sites.google.com/view/project-aio/competition3" target="_blank" rel="noopener">AI王 〜クイズAI日本一決定戦〜第3回&lt;/a>にて我々のチーム レヴォ が前回に続き優勝しました．
+レヴォは93.8%の正解率(完全一致率)を達成しました．&lt;/p></description></item><item><title>1st place on AIO2nd</title><link>https://kuni88.github.io/project/aio2nd/</link><pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/project/aio2nd/</guid><description>&lt;p>Our team Revo (Akimoto &amp;amp; Takeoka) won &lt;a href="https://sites.google.com/view/project-aio/competition2" target="_blank" rel="noopener">AIO 2nd, a Japanese Quiz AI competition&lt;/a> (2021/10 - 2022/03).
 The goal of the competition is to find optimal answers for given quizzes without any context accurately.
-Revo has achieved 83.9% accuracy on the test set.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/view/project-aio/competition2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AI王 〜クイズAI日本一決定戦〜第2回&lt;/a&gt;にて我々のチーム レヴォ が優勝しました．
-レヴォは83.9%の完全一致率を達成しました．&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+Revo has achieved 83.9% accuracy on the test set.&lt;/p>
+&lt;p>&lt;a href="https://sites.google.com/view/project-aio/competition2" target="_blank" rel="noopener">AI王 〜クイズAI日本一決定戦〜第2回&lt;/a>にて我々のチーム レヴォ が優勝しました．
+レヴォは83.9%の完全一致率を達成しました．&lt;/p></description></item></channel></rss>

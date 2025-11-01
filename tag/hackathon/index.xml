@@ -1,40 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hackathon | Kunihiro Takeoka</title>
-    <link>https://kuni88.github.io/tag/hackathon/</link>
-      <atom:link href="https://kuni88.github.io/tag/hackathon/index.xml" rel="self" type="application/rss+xml" />
-    <description>Hackathon</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Hackathon</title>
-      <link>https://kuni88.github.io/tag/hackathon/</link>
-    </image>
-    
-    <item>
-      <title>Yotta Free</title>
-      <link>https://kuni88.github.io/project/yotta_free/</link>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://kuni88.github.io/project/yotta_free/</guid>
-      <description>&lt;p&gt;Yotta Free is a Mac app for making users look drunk.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hackathon | Kunihiro Takeoka</title><link>https://kuni88.github.io/tag/hackathon/</link><atom:link href="https://kuni88.github.io/tag/hackathon/index.xml" rel="self" type="application/rss+xml"/><description>Hackathon</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Hackathon</title><link>https://kuni88.github.io/tag/hackathon/</link></image><item><title>Yotta Free</title><link>https://kuni88.github.io/project/yotta_free/</link><pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate><guid>https://kuni88.github.io/project/yotta_free/</guid><description>&lt;p>Yotta Free is a Mac app for making users look drunk.
 Using both this app and a video conferencing app, you can enjoy online drinking parties without alcohol.
 Yotta Free changes your face and voice to look drunk in real-time.
-This app is used face segmentation &lt;a href=&#34;https://github.com/zllrunning/face-parsing.PyTorch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;face-parsing.Pytorch&lt;/a&gt; and vocoder &lt;a href=&#34;https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyWorld&lt;/a&gt; inside.
-This app is developed with my friends in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2021&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Insticker</title>
-      <link>https://kuni88.github.io/project/insticker/</link>
-      <pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate>
-      <guid>https://kuni88.github.io/project/insticker/</guid>
-      <description>&lt;p&gt;Insticker is a system for instantly generating a sticker from a target word and your emotion.
+This app is used face segmentation &lt;a href="https://github.com/zllrunning/face-parsing.PyTorch" target="_blank" rel="noopener">face-parsing.Pytorch&lt;/a> and vocoder &lt;a href="https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder" target="_blank" rel="noopener">PyWorld&lt;/a> inside.
+This app is developed with my friends in a one-day hackathon &lt;a href="https://hackday.jp/" target="_blank" rel="noopener">&lt;em>HackDay 2021&lt;/em>&lt;/a>.&lt;/p></description></item><item><title>Insticker</title><link>https://kuni88.github.io/project/insticker/</link><pubDate>Sun, 15 Dec 2019 12:00:00 +0900</pubDate><guid>https://kuni88.github.io/project/insticker/</guid><description>&lt;p>Insticker is a system for instantly generating a sticker from a target word and your emotion.
 This system works with a laptop PC and a cutting plotter.
-Insticker project is in a one-day hackathon &lt;a href=&#34;https://hackday.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;HackDay 2019&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+Insticker project is in a one-day hackathon &lt;a href="https://hackday.jp/" target="_blank" rel="noopener">&lt;em>HackDay 2019&lt;/em>&lt;/a>.&lt;/p></description></item></channel></rss>
