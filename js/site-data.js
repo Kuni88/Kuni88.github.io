@@ -12,8 +12,8 @@ window.PROFILE = {
     ja: "稼働中 · cotomi Act 開発 · 共同研究歓迎",
   },
   mission: {
-    en: "Improve people's access to the information they want.",
-    ja: "人々が欲しい情報にたどり着けるようにする。",
+    en: "A world where people can focus on the work they want to do.",
+    ja: "やりたい仕事に集中できる世界に",
   },
   now: {
       en: [
