@@ -1,0 +1,242 @@
+/* ── Custom design override for Kuni88.github.io ────────────────────────────
+ * Applies the new purple/indigo design system to Wowchemy-generated subpages.
+ * Loaded after wowchemy.css to take precedence.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap');
+
+/* Color tokens */
+:root {
+  --primary: #6d28d9;
+  --primary-dark: #5b21b6;
+  --primary-light: #ede9fe;
+  --kuni-bg: #f8f6f2;
+  --kuni-bg-2: #f1ede8;
+  --kuni-card: #ffffff;
+  --kuni-fg: #1c1a17;
+  --kuni-fg-2: #3d3a34;
+  --kuni-dim: #7a7570;
+  --kuni-border: #e3ddd6;
+  --kuni-accent: #6d28d9;
+  --kuni-accent-soft: #ede9fe;
+  --kuni-accent-text: #4c1d95;
+  --kuni-radius: 10px;
+}
+
+/* Base */
+body {
+  font-family: 'Geist', system-ui, -apple-system, sans-serif !important;
+  background: var(--kuni-bg) !important;
+  color: var(--kuni-fg) !important;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: var(--kuni-bg-2) !important;
+  border-bottom: 1px solid var(--kuni-border) !important;
+  box-shadow: none !important;
+}
+.navbar-brand,
+.navbar .nav-link {
+  color: var(--kuni-fg) !important;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--kuni-accent) !important;
+}
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ── Back to home chip */
+.navbar-brand::before {
+  content: "← ";
+  opacity: 0.5;
+  font-size: 0.85em;
+}
+
+/* ── Page body */
+.page-body {
+  background: var(--kuni-bg) !important;
+}
+
+/* ── Cards */
+.card,
+.card-simple,
+.pub-list-item {
+  background: var(--kuni-card) !important;
+  border: 1px solid var(--kuni-border) !important;
+  border-radius: var(--kuni-radius) !important;
+  box-shadow: none !important;
+  transition: border-color 180ms, transform 180ms !important;
+}
+.card:hover,
+.card-simple:hover {
+  border-color: var(--kuni-accent) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05) !important;
+}
+
+/* ── Buttons */
+.btn-outline-primary {
+  color: var(--kuni-accent) !important;
+  border-color: var(--kuni-accent) !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  padding: 3px 10px !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: var(--kuni-accent) !important;
+  color: #fff !important;
+}
+.btn-primary {
+  background: var(--kuni-accent) !important;
+  border-color: var(--kuni-accent) !important;
+  border-radius: 6px !important;
+}
+.btn-primary:hover {
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* ── Section headings */
+.section-heading h1,
+.universal-wrapper h1,
+h1.page-title {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--kuni-fg) !important;
+}
+
+/* ── Article title links */
+.article-title a,
+.section-subheading.article-title a {
+  color: var(--kuni-fg) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+.article-title a:hover {
+  color: var(--kuni-accent) !important;
+}
+
+/* ── Article metadata */
+.article-metadata,
+.article-metadata a {
+  color: var(--kuni-dim) !important;
+  font-size: 0.82rem;
+}
+.pub-publication {
+  color: var(--kuni-accent) !important;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+/* ── Experience timeline */
+.exp-fill {
+  background: var(--kuni-accent) !important;
+  border-color: var(--kuni-accent) !important;
+}
+.badge-pill.border {
+  border-color: var(--kuni-accent) !important;
+}
+.exp-title {
+  color: var(--kuni-fg) !important;
+  font-weight: 500 !important;
+}
+.exp-company {
+  color: var(--kuni-accent) !important;
+}
+
+/* ── Tags / categories */
+.badge-primary,
+.badge.badge-primary {
+  background: var(--kuni-accent-soft) !important;
+  color: var(--kuni-accent-text) !important;
+  border-radius: 999px !important;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+/* ── Search */
+#search-query:focus,
+.form-control:focus {
+  border-color: var(--kuni-accent) !important;
+  box-shadow: 0 0 0 3px rgba(109,40,217,0.12) !important;
+}
+
+/* ── Network icons */
+.big-icon {
+  color: var(--kuni-accent) !important;
+}
+.network-icon a:hover .big-icon {
+  color: var(--primary-dark) !important;
+}
+
+/* ── Portrait / avatar */
+.avatar-circle {
+  border: 2px solid var(--kuni-border) !important;
+  border-radius: 14px !important;
+}
+
+/* ── "See all" / footer links */
+.see-all a {
+  color: var(--kuni-accent) !important;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* ── Footer */
+.site-footer {
+  background: var(--kuni-bg-2) !important;
+  border-top: 1px solid var(--kuni-border) !important;
+  color: var(--kuni-dim) !important;
+}
+.site-footer a {
+  color: var(--kuni-accent) !important;
+}
+
+/* ── Pagination */
+.page-link {
+  color: var(--kuni-accent) !important;
+  border-color: var(--kuni-border) !important;
+}
+.page-item.active .page-link {
+  background: var(--kuni-accent) !important;
+  border-color: var(--kuni-accent) !important;
+  color: #fff !important;
+}
+
+/* ── Image hover */
+.img-hover-zoom {
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+/* ── Project cards */
+.project-card .card-simple {
+  border-radius: var(--kuni-radius) !important;
+}
+
+/* ── Publication detail page */
+.pub-abstract p,
+.article-style p {
+  line-height: 1.7;
+  color: var(--kuni-fg-2, #3d3a34);
+}
+
+/* ── Theme toggle icon */
+.fa-moon,
+.fa-sun {
+  color: var(--kuni-accent) !important;
+}
+
+/* ── Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--kuni-border); border-radius: 99px; }
