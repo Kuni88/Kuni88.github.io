@@ -39,6 +39,17 @@ window.PROFILE = {
 
 window.PUBLICATIONS = [
   {
+    id: "oyamada-2026-cais", slug: "oyamada-2026-cais",
+    venue: "CAIS 2026", year: 2026, month: "May",
+    authors: ["Masafumi Oyamada", "Kunihiro Takeoka", "Kosuke Akimoto", "Ryoma Obara", "Masafumi Enomoto", "Haochen Zhang", "Daichi Haraguchi", "Takuya Tamura"],
+    title: "cotomi Act: Learning to Automate Work by Watching You",
+    tag: "Agentic AI · Demo", icon: "sparkle",
+    url: "/publication/oyamada-2026-cais/",
+    summary_en: "Demo of a browser agent that passively observes user behavior to build shared organizational knowledge, then uses it to autonomously automate multi-step digital tasks. Achieves 80.4% on WebArena, exceeding the reported human baseline.",
+    summary_ja: "ユーザの操作を観察して組織的な業務知識を自動構築し、その知識でマルチステップのデジタル業務を自律的に自動化するブラウザエージェント cotomi Actのデモペーパーです。WebArena で 80.4% を達成し、報告されている人間のベースラインを超えています。",
+    pdf_url: "https://www.caisconf.org/program/2026/demos/cotomi-act/",
+  },
+  {
     id: "kusano-2025-recsys", slug: "kusano-2025-recsys",
     venue: "RecSys 2025", year: 2025, month: "Sep",
     authors: ["Genki Kusano", "Kosuke Akimoto", "Kunihiro Takeoka"],
