@@ -7,16 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Project — Kunihiro Takeoka" />
 <meta property="og:url" content="https://kuni88.github.io/project/aio3rd/" />
-<meta name="theme-color" content="#7c3aed" />
+<meta property="og:image" content="https://kuni88.github.io/media/white-bear/icon-512.png" />
+<meta property="twitter:card" content="summary" />
+<meta name="theme-color" content="#0D2C54" />
 <link rel="canonical" href="https://kuni88.github.io/project/aio3rd/" />
-<link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  :root{--bg:#f8f6f2;--bg-2:#f1ede8;--bg-card:#ffffff;--fg:#1c1a17;--fg-2:#3d3a34;--fg-dim:#7a7570;--border:#e3ddd6;--border-2:#ece8e2;--accent:#6d28d9;--accent-soft:#ede9fe;--accent-text:#4c1d95;}
-  [data-theme="dark"]{--bg:#1a1816;--bg-2:#211f1c;--bg-card:#252220;--fg:#f0ece6;--fg-2:#c8c0b4;--fg-dim:#857e75;--border:#302c28;--border-2:#2a2622;--accent:#a78bfa;--accent-soft:#3b2d6e;--accent-text:#c4b5fd;}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,-apple-system,sans-serif;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,-apple-system,sans-serif;}
   *{box-sizing:border-box;}a{color:inherit;}
   .mono{font-family:'JetBrains Mono','Fira Mono',monospace;}
   @keyframes pulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(2.4);opacity:0}}
@@ -30,6 +29,12 @@
   @media(max-width:900px){.layout{grid-template-columns:1fr!important;}.sidebar{position:static!important;height:auto!important;border-right:none!important;border-bottom:1px solid var(--border);}}
   ::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
 </style>
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/media/white-bear/favicon-32.png" />
+<link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="stylesheet" href="/css/brand.css" />
 </head>
 <body data-project-id="aio3">
 <div id="root"></div>
@@ -41,14 +46,8 @@
 
 <script type="text/babel">
 
-const {PROFILE,PROJECTS,LINKS,ACCENT_MAP}=window;
+const {PROFILE,PROJECTS,LINKS}=window;
 
-function applyAccent(accent,theme){
-  const p=ACCENT_MAP[accent]||ACCENT_MAP.purple;
-  const [a,as,at]=theme==="dark"?p.dark:p.light;
-  const r=document.documentElement;
-  r.style.setProperty("--accent",a);r.style.setProperty("--accent-soft",as);r.style.setProperty("--accent-text",at);
-}
 
 function Icon({name,size=16,style}){
   const s={width:size,height:size,display:"inline-block",verticalAlign:"middle",flexShrink:0,...style};
@@ -95,8 +94,11 @@ function Sidebar({lang,setLang,theme,setTheme,backLabel,backHref}){
   const p=PROFILE;
   return (
     <aside className="sidebar" style={{background:"var(--bg-2)",borderRight:"1px solid var(--border)",padding:"24px 22px",position:"sticky",top:0,height:"100vh",overflowY:"auto",display:"flex",flexDirection:"column"}}>
-      <div style={{display:"flex",alignItems:"center",gap:6,justifyContent:"space-between",marginBottom:20}}>
-        <a href={backHref} style={{display:"flex",alignItems:"center",gap:5,textDecoration:"none",color:"var(--fg-dim)",fontSize:12,fontFamily:"'JetBrains Mono',monospace",letterSpacing:0.3}}>
+      <div className="sidebar-toolbar">
+        <a className="site-mark" href="/" aria-label={lang === "ja" ? "ホーム" : "Home"}>
+          <span className="site-mark-image" aria-hidden="true" />
+        </a>
+        <a className="sidebar-back" href={backHref} style={{display:"flex",alignItems:"center",gap:5,textDecoration:"none",color:"var(--fg-dim)",fontSize:12,fontFamily:"'JetBrains Mono',monospace",letterSpacing:0.3}}>
           <span style={{fontSize:14}}>←</span><span>{backLabel}</span>
         </a>
         <div style={{display:"flex",gap:6}}>
@@ -222,11 +224,9 @@ function App(){
   const proj=PROJECTS.find(p=>p.id===projId);
   const[lang,setLang]=React.useState(()=>localStorage.getItem("kuni_lang")||"en");
   const[theme,setTheme]=React.useState(()=>localStorage.getItem("kuni_theme")||"light");
-  const[accent,setAccent]=React.useState(()=>localStorage.getItem("kuni_accent")||"purple");
 
   React.useEffect(()=>{document.documentElement.dataset.theme=theme;localStorage.setItem("kuni_theme",theme);},[theme]);
   React.useEffect(()=>{localStorage.setItem("kuni_lang",lang);},[lang]);
-  React.useEffect(()=>{applyAccent(accent,theme);localStorage.setItem("kuni_accent",accent);},[accent,theme]);
   React.useEffect(()=>{if(proj)document.title=(lang==="en"?proj.title_en:proj.title_ja)+" — Kunihiro Takeoka";},[proj,lang]);
 
   if(!proj) return <div style={{padding:40,fontFamily:"monospace",color:"var(--fg-dim)"}}>Project not found: {projId}</div>;

@@ -1,0 +1,106 @@
+/* Shared palette drawn from the supplied bear logo kit. */
+:root {
+  color-scheme: light;
+  --bg: #fffbf3;
+  --bg-2: #f4eee4;
+  --bg-card: #fffefa;
+  --fg: #0d2c54;
+  --fg-2: #354963;
+  --fg-dim: #5e6b7d;
+  --border: #e9dfd1;
+  --border-2: #f0e8dc;
+  --accent: #0d2c54;
+  --accent-soft: #dee6ef;
+  --accent-text: #0d2c54;
+  --mark-color: #0d2c54;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b192b;
+  --bg-2: #0e2037;
+  --bg-card: #122840;
+  --fg: #fffbf3;
+  --fg-2: #dee6ef;
+  --fg-dim: #9daec1;
+  --border: #2b4059;
+  --border-2: #21364e;
+  --accent: #b6cde5;
+  --accent-soft: #213b58;
+  --accent-text: #dee6ef;
+  --mark-color: #fffbf3;
+}
+
+/* Keep older generated pages in the same palette. */
+:root {
+  --primary: var(--accent);
+  --primary-dark: var(--accent-text);
+  --primary-light: var(--accent-soft);
+  --kuni-bg: var(--bg);
+  --kuni-bg-2: var(--bg-2);
+  --kuni-card: var(--bg-card);
+  --kuni-fg: var(--fg);
+  --kuni-fg-2: var(--fg-2);
+  --kuni-dim: var(--fg-dim);
+  --kuni-border: var(--border);
+  --kuni-accent: var(--accent);
+  --kuni-accent-soft: var(--accent-soft);
+  --kuni-accent-text: var(--accent-text);
+  --kuni-radius: 10px;
+}
+
+.sidebar-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  margin-bottom: 24px;
+}
+
+.site-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  border-radius: 8px;
+  color: var(--mark-color);
+  transition: background-color 180ms;
+}
+
+.site-mark-image {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: currentColor;
+  -webkit-mask: url('/media/white-bear/logo.svg') center / contain no-repeat;
+  mask: url('/media/white-bear/logo.svg') center / contain no-repeat;
+}
+
+.site-mark:hover {
+  background: var(--accent-soft);
+}
+
+.sidebar-toolbar:has(.sidebar-back) .site-mark {
+  margin-right: 4px;
+}
+
+.sidebar-back {
+  flex: 1;
+  min-width: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar *, .fade-in > *, .card-hover, .link-arrow {
+    animation: none !important;
+    transition: none !important;
+  }
+}

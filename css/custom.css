@@ -1,28 +1,12 @@
 /* ── Custom design override for Kuni88.github.io ────────────────────────────
- * Applies the new purple/indigo design system to Wowchemy-generated subpages.
+ * Applies the shared navy/ivory design system to Wowchemy-generated subpages.
  * Loaded after wowchemy.css to take precedence.
  * ─────────────────────────────────────────────────────────────────────────── */
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap');
 
-/* Color tokens */
-:root {
-  --primary: #6d28d9;
-  --primary-dark: #5b21b6;
-  --primary-light: #ede9fe;
-  --kuni-bg: #f8f6f2;
-  --kuni-bg-2: #f1ede8;
-  --kuni-card: #ffffff;
-  --kuni-fg: #1c1a17;
-  --kuni-fg-2: #3d3a34;
-  --kuni-dim: #7a7570;
-  --kuni-border: #e3ddd6;
-  --kuni-accent: #6d28d9;
-  --kuni-accent-soft: #ede9fe;
-  --kuni-accent-text: #4c1d95;
-  --kuni-radius: 10px;
-}
+/* Color tokens are shared in brand.css. */
 
 /* Base */
 body {

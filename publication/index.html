@@ -8,29 +8,15 @@
 <meta property="og:title" content="Publications — Kunihiro Takeoka" />
 <meta property="og:description" content="Publication list for Kunihiro Takeoka." />
 <meta property="og:url" content="https://kuni88.github.io/publication/" />
-<meta property="og:image" content="https://kuni88.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
+<meta property="og:image" content="https://kuni88.github.io/media/white-bear/icon-512.png" />
 <meta property="twitter:card" content="summary" />
-<meta name="theme-color" content="#7c3aed" />
+<meta name="theme-color" content="#0D2C54" />
 <link rel="canonical" href="https://kuni88.github.io/publication/" />
-<link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
-<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --bg: #f8f6f2; --bg-2: #f1ede8; --bg-card: #ffffff;
-    --fg: #1c1a17; --fg-2: #3d3a34; --fg-dim: #7a7570;
-    --border: #e3ddd6; --border-2: #ece8e2;
-    --accent: #6d28d9; --accent-soft: #ede9fe; --accent-text: #4c1d95;
-  }
-  [data-theme="dark"] {
-    --bg: #1a1816; --bg-2: #211f1c; --bg-card: #252220;
-    --fg: #f0ece6; --fg-2: #c8c0b4; --fg-dim: #857e75;
-    --border: #302c28; --border-2: #2a2622;
-    --accent: #a78bfa; --accent-soft: #3b2d6e; --accent-text: #c4b5fd;
-  }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: 'Geist', system-ui, -apple-system, sans-serif; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: 'Geist', system-ui, -apple-system, sans-serif; }
   * { box-sizing: border-box; }
   a { color: inherit; }
   .mono { font-family: 'JetBrains Mono', 'Fira Mono', monospace; }
@@ -54,6 +40,12 @@
   ::-webkit-scrollbar-track{background:transparent}
   ::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
 </style>
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/media/white-bear/favicon-32.png" />
+<link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="stylesheet" href="/css/brand.css" />
 </head>
 <body>
 <div id="root"></div>
@@ -62,7 +54,7 @@
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 <script src="/js/site-data.js"></script>
 <script type="text/babel">
-const { PROFILE, PUBLICATIONS, LINKS, ACCENT_MAP } = window;
+const { PROFILE, PUBLICATIONS, LINKS } = window;
 
 const T = {
   en: {
@@ -79,14 +71,6 @@ const T = {
   }
 };
 
-function applyAccent(accent, theme) {
-  const p = ACCENT_MAP[accent] || ACCENT_MAP.purple;
-  const [a, as, at] = theme === "dark" ? p.dark : p.light;
-  const r = document.documentElement;
-  r.style.setProperty("--accent", a);
-  r.style.setProperty("--accent-soft", as);
-  r.style.setProperty("--accent-text", at);
-}
 
 function Icon({ name, size = 16, style }) {
   const s = { width:size, height:size, display:"inline-block", verticalAlign:"middle", flexShrink:0, ...style };
@@ -133,7 +117,10 @@ function Sidebar({ lang, setLang, theme, setTheme }) {
   const t = T[lang];
   return (
     <aside className="sidebar" style={{background:"var(--bg-2)",borderRight:"1px solid var(--border)",padding:"24px 22px",position:"sticky",top:0,height:"100vh",overflowY:"auto",display:"flex",flexDirection:"column"}}>
-      <div style={{display:"flex",alignItems:"center",gap:6,justifyContent:"flex-end",marginBottom:20}}>
+      <div className="sidebar-toolbar">
+        <a className="site-mark" href="/" aria-label={lang === "ja" ? "ホーム" : "Home"}>
+          <span className="site-mark-image" aria-hidden="true" />
+        </a>
         <button onClick={() => setTheme(theme==="dark"?"light":"dark")} title={t.toggle_theme}
           style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 8px",borderRadius:6,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:4}}>
           <Icon name={theme==="dark"?"sun":"moon"} size={13} />
@@ -265,7 +252,6 @@ function App() {
   const setTheme = v => { setThemeRaw(v); localStorage.setItem("kuni_theme", v); };
   React.useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    applyAccent("purple", theme);
   }, [theme]);
   return (
     <div className="layout" style={{display:"grid",gridTemplateColumns:"330px 1fr",minHeight:"100vh"}}>

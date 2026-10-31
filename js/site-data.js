@@ -8,8 +8,8 @@ window.PROFILE = {
   org: { en: "NEC Corporation — Data Science Laboratory", ja: "NEC データサイエンスラボラトリー" },
   location: "Tokyo, Japan",
   status: {
-    en: "active · building cotomi Act · open to collab",
-    ja: "稼働中 · cotomi Act 開発 · 共同研究歓迎",
+    en: "active · building cotomi Agent · open to collab",
+    ja: "稼働中 · cotomi Agent 開発 · 共同研究歓迎",
   },
   mission: {
     en: "A world where people can focus on the work they want to do.",
@@ -17,12 +17,12 @@ window.PROFILE = {
   },
   now: {
       en: [
-	  "Building Agentic AI, cotomi Act",
+	  "Building Agentic AI, cotomi Agent",
 	  "Building NEC's cotomi LLM series",
 	  "LLM-based retrieval & recommendation",
     ],
       ja: [
-	  "Agentic AI 'cotomi Act' の開発",
+	  "Agentic AI 'cotomi Agent' の開発",
 	  "NECのLLM (cotomi) シリーズの開発",
 	  "LLM を活用した検索・推薦",
     ],
@@ -46,7 +46,7 @@ window.PUBLICATIONS = [
     tag: "Agentic AI · Demo", icon: "sparkle",
     url: "/publication/oyamada-2026-cais/",
     summary_en: "Demo of a browser agent that passively observes user behavior to build shared organizational knowledge, then uses it to autonomously automate multi-step digital tasks. Achieves 80.4% on WebArena, exceeding the reported human baseline.",
-    summary_ja: "ユーザの操作を観察して組織的な業務知識を自動構築し、その知識でマルチステップのデジタル業務を自律的に自動化するブラウザエージェント cotomi Actのデモペーパーです。WebArena で 80.4% を達成し、報告されている人間のベースラインを超えています。",
+    summary_ja: "ユーザの操作を観察して組織的な業務知識を自動構築し、その知識でマルチステップのデジタル業務を自律的に自動化するブラウザエージェント cotomi Agentのデモペーパーです。WebArena で 80.4% を達成し、報告されている人間のベースラインを超えています。",
     pdf_url: "https://www.caisconf.org/program/2026/demos/cotomi-act/",
   },
   {
@@ -59,6 +59,23 @@ window.PUBLICATIONS = [
     summary_en: "Systematic evaluation of prompt design choices for LLM-based personalized recommendation across multiple prompting setups.",
     summary_ja: "LLM ベースの個別化推薦に対して、複数のプロンプト設計を体系的に比較評価した研究です。",
     pdf_url: "https://dblp.org/rec/conf/recsys/KusanoAT25.html",
+  },
+  {
+    id: "radevski-2025-acl",
+    slug: "radevski-2025-synthesizing",
+    venue: "ACL 2025",
+    year: 2025,
+    month: "Jul",
+    authors: ["Gorjan Radevski", "Kiril Gashteovski", "Shahbaz Syed", "Christopher Malon", "Sebastien Nicolas", "Chia-Chien Hung", "Timo Sztyler", "Verena Heußer", "Wiem Ben Rim", "Masafumi Enomoto", "Kunihiro Takeoka", "Masafumi Oyamada", "Goran Glavaš", "Carolin Lawrence"],
+    title: "On Synthesizing Data for Context Attribution in Question Answering",
+    tag: "QA · Attribution",
+    icon: "paper",
+    url: "/publication/radevski-2025-synthesizing/",
+    summary_en: "Introduces SynQA, a method for generating synthetic question-answer pairs grounded in selected context sentences, and uses this data to train small language models to attribute answers to supporting evidence.",
+    summary_ja: "選択した文脈文を根拠とする質問・回答ペアを生成する SynQA を提案。合成データで小規模言語モデルを学習し、質問応答の回答と根拠となる文脈を対応付ける手法を評価しました。",
+    pdf_url: "https://aclanthology.org/2025.acl-long.828/",
+    doi_url: "https://doi.org/10.18653/v1/2025.acl-long.828",
+    bib: true,
   },
   {
     id: "abe-2025-sigir", slug: "abe-2025-sigir",
@@ -122,18 +139,19 @@ window.PUBLICATIONS = [
     id: "dong-2021-icde", slug: "dong-2021-efficient",
     venue: "ICDE 2021", year: 2021, month: "Apr",
     authors: ["Yuyang Dong", "Kunihiro Takeoka", "Chuan Xiao", "Masafumi Oyamada"],
-    title: "Efficient Joinable Table Discovery in Data Lake: A High-Dimensional Similarity-Based Approach",
+    title: "Efficient Joinable Table Discovery in Data Lakes: A High-Dimensional Similarity-Based Approach",
     tag: "Data", icon: "search",
     url: "/publication/dong-2021-efficient/",
     summary_en: "Introduces a similarity-based method for efficiently finding joinable tables in large data lakes.",
     summary_ja: "大規模データレイクから結合可能なテーブルを効率よく見つける類似度ベース手法を提案した研究です。",
-    pdf_url: "https://link.springer.com/chapter/10.1007/978-3-030-75768-7_18",
+    pdf_url: "https://arxiv.org/abs/2010.13273",
+    doi_url: "https://doi.org/10.1109/ICDE51399.2021.00046",
     bib: true,
   },
   {
     id: "dong-2020-vldb", slug: "dong-2020-continuous",
-    venue: "VLDB Journal 2020", year: 2020, month: "Nov",
-    authors: ["Yuyang Dong", "Chuan Xiao", "Hanxiong Chen", "Jefferey Xu Yu", "Kunihiro Takeoka", "Masafumi Oyamada", "Hiroyuki Kitagawa"],
+    venue: "VLDB Journal 2021", year: 2021, month: "Mar",
+    authors: ["Yuyang Dong", "Chuan Xiao", "Hanxiong Chen", "Jeffrey Xu Yu", "Kunihiro Takeoka", "Masafumi Oyamada", "Hiroyuki Kitagawa"],
     title: "Continuous top-k spatial–keyword search on dynamic objects",
     tag: "DB · IR", icon: "search",
     url: "/publication/dong-2020-continuous/",
@@ -175,11 +193,11 @@ window.PUBLICATIONS = [
 window.PROJECTS = [
   {
     id: "cotomi-act", slug: "cotomi-act", year: 2026, icon: "bot",
-    title_en: "cotomi Act Development",  title_ja: "cotomi Act 開発",
+    title_en: "cotomi Agent Development",  title_ja: "cotomi Agent 開発",
     desc_en: "Developing NEC's agent technology for continuous automation of digital operations.",
     desc_ja: "デジタル業務の継続的な自動化を実現するNECのエージェント技術を開発。",
-    body_en: "cotomi Act is NEC's agent technology for automating digital operations that require judgment and adaptive responses, such as expense reimbursement, order processing, and screening workflows. According to NEC's December 3, 2025 press release, the solution automatically extracts operational know-how from browser histories and action logs, turns it into organizational assets, and uses that knowledge to drive safe and reliable automation at scale.",
-    body_ja: "cotomi Act は、経費精算、受発注、審査業務のように、判断や臨機応変な対応が求められるデジタル業務を自動化するための NEC のエージェント技術です。2025年12月3日の NEC 公式プレスリリースでは、ブラウザ上の閲覧履歴や操作ログから業務ノウハウを自動抽出して組織資産化し、その知識を用いて安全・安心に業務自動化を継続的に推進するソリューションとして説明されています。",
+    body_en: "cotomi Agent is NEC's agent technology for automating digital operations that require judgment and adaptive responses, such as expense reimbursement, order processing, and screening workflows. According to NEC's December 3, 2025 press release, the solution automatically extracts operational know-how from browser histories and action logs, turns it into organizational assets, and uses that knowledge to drive safe and reliable automation at scale.",
+    body_ja: "cotomi Agent は、経費精算、受発注、審査業務のように、判断や臨機応変な対応が求められるデジタル業務を自動化するための NEC のエージェント技術です。2025年12月3日の NEC 公式プレスリリースでは、ブラウザ上の閲覧履歴や操作ログから業務ノウハウを自動抽出して組織資産化し、その知識を用いて安全・安心に業務自動化を継続的に推進するソリューションとして説明されています。",
     tag: "Agentic AI, automation", url: "https://jpn.nec.com/press/202512/20251203_01.html",
   },
   {
@@ -206,7 +224,7 @@ window.PROJECTS = [
     desc_en: "Japanese Quiz AI Competition 2022 champion with team Revo.",
     desc_ja: "チーム Revo として日本語クイズAIコンペ2022で優勝。",
     body_en: "Our team Revo (Takeoka, Akimoto, Hayashi, and Oyamada) won 1st place in AI王 (AI-Ō) 3rd competition, a Japanese Quiz AI competition held in 2022. The competition tested systems on open-domain question answering over Japanese trivia questions. We built a retrieval-augmented QA pipeline combining dense retrieval and cross-encoder reranking, achieving the highest accuracy among all teams.",
-    body_ja: "チーム Revo（竹岡・秋本・林・小山田）として、2022年開催の日本語クイズAIコンペ「AI王 第3回」で1位を獲得しました。コンペは日本語の一般知識問題に対するオープンドメイン質問応答システムを競うものでした。密なベクトル検索とクロスエンコーダーによるリランキングを組み合わせた検索拡張型QAパイプラインを構築し、全チーム中最高精度を達成しました。",
+    body_ja: "チーム Revo（竹岡・秋元・林・小山田）として、2022年開催の日本語クイズAIコンペ「AI王 第3回」で1位を獲得しました。コンペは日本語の一般知識問題に対するオープンドメイン質問応答システムを競うものでした。密なベクトル検索とクロスエンコーダーによるリランキングを組み合わせた検索拡張型QAパイプラインを構築し、全チーム中最高精度を達成しました。",
     tag: "NLProc, competition", url: "https://sites.google.com/view/project-aio/competition3/final-presentation",
     image: "/project/aio3rd/featured.png",
   },
@@ -216,7 +234,7 @@ window.PROJECTS = [
     desc_en: "Japanese Quiz AI Competition 2021–2022 champion.",
     desc_ja: "日本語クイズAIコンペ2021–2022で優勝。",
     body_en: "Our team Revo (Akimoto & Takeoka) won 1st place in AI王 (AI-Ō) 2nd competition, a Japanese Quiz AI competition spanning 2021–2022. We developed a retrieval-based QA system leveraging BERT-based dense retrieval and a cross-encoder reranker over a large Japanese Wikipedia corpus. The system outperformed all other teams in the final evaluation.",
-    body_ja: "チーム Revo（秋本・竹岡）として、2021–2022年開催の日本語クイズAIコンペ「AI王 第2回」で1位を獲得しました。BERTベースの密ベクトル検索とクロスエンコーダーによるリランキングを日本語Wikipediaコーパスに適用したQAシステムを開発し、最終評価で全チームを上回りました。",
+    body_ja: "チーム Revo（秋元・竹岡）として、2021–2022年開催の日本語クイズAIコンペ「AI王 第2回」で1位を獲得しました。BERTベースの密ベクトル検索とクロスエンコーダーによるリランキングを日本語Wikipediaコーパスに適用したQAシステムを開発し、最終評価で全チームを上回りました。",
     tag: "NLProc, competition", url: "/project/aio2nd/",
     image: "/project/aio2nd/featured.png",
   },
@@ -258,8 +276,8 @@ window.EXPERIENCE = [
   {
     title_en: "Senior Principal Researcher", title_ja: "主幹研究員",
     org: "NEC Corporation", start: "2026-04", end: null,
-    notes_en: "Technical lead of cotomi Act team.",
-    notes_ja: "cotomi Act チームのテクニカルリード",
+    notes_en: "Product Manager for cotomi Agent.",
+    notes_ja: "cotomi Agent のプロダクトマネージャー",
     url: null,
   },
   {
@@ -306,11 +324,3 @@ window.LINKS = [
   { label: "twitter", icon: "twitter", url: "https://twitter.com/_kuni88" },
   { label: "email",   icon: "mail",    url: "mailto:kunihiro.takeoka.93+contact@gmail.com" },
 ];
-
-window.ACCENT_MAP = {
-  purple: { light: ["#6d28d9","#ede9fe","#4c1d95"], dark: ["#a78bfa","#3b2d6e","#c4b5fd"] },
-  indigo: { light: ["#4338ca","#e0e7ff","#312e81"], dark: ["#818cf8","#2d2a6e","#a5b4fc"] },
-  blue:   { light: ["#1d4ed8","#dbeafe","#1e3a8a"], dark: ["#60a5fa","#1e3a5f","#93c5fd"] },
-  green:  { light: ["#16a34a","#dcfce7","#14532d"], dark: ["#4ade80","#14532d","#86efac"] },
-  amber:  { light: ["#d97706","#fef3c7","#92400e"], dark: ["#fbbf24","#451a03","#fde68a"] },
-};
