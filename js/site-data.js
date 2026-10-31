@@ -58,7 +58,7 @@ window.PUBLICATIONS = [
     url: "/publication/kusano-2025-recsys/",
     summary_en: "Systematic evaluation of prompt design choices for LLM-based personalized recommendation across multiple prompting setups.",
     summary_ja: "LLM ベースの個別化推薦に対して、複数のプロンプト設計を体系的に比較評価した研究です。",
-    pdf_url: "https://dblp.org/rec/conf/recsys/KusanoAT25.html",
+    pdf_url: "https://arxiv.org/abs/2507.13525",
   },
   {
     id: "radevski-2025-acl",
@@ -86,7 +86,7 @@ window.PUBLICATIONS = [
     url: "/publication/abe-2025-sigir/",
     summary_en: "Analyzes when LLM-based query expansion breaks down, especially for unfamiliar or ambiguous search intents.",
     summary_ja: "LLM によるクエリ拡張が、未知語や曖昧な検索意図に対して失敗しやすい条件を分析した研究です。",
-    pdf_url: "https://dblp.org/rec/conf/sigir/AbeTKO25.html",
+    pdf_url: "https://arxiv.org/abs/2505.12694",
   },
   {
     id: "yano-2024-naacl", slug: "yano-2024-naacl",
@@ -97,7 +97,7 @@ window.PUBLICATIONS = [
     url: "/publication/yano-2024-naacl/",
     summary_en: "Studies how relevance, diversity, and exclusivity affect keyword augmentation for zero-shot text classification.",
     summary_ja: "ゼロショット分類向けのキーワード拡張で、関連性・多様性・排他性の設計が与える影響を調べた研究です。",
-    pdf_url: "https://dblp.org/rec/conf/naacl/YanoTO24.html",
+    pdf_url: "https://aclanthology.org/2024.starsem-1.9/",
   },
   {
     id: "akimoto-2023-emnlp", slug: "akimoto-etal-2023-context",
@@ -171,7 +171,7 @@ window.PUBLICATIONS = [
     summary_en: "Explores how to train models effectively when annotations include unsure responses instead of hard labels.",
     summary_ja: "確信のない回答を含むアノテーション環境で、学習をどう安定化させるかを扱った研究です。",
     image: "/publication/aaai-2020-unsure/featured.png",
-    pdf_url: "https://aaai.org/ojs/index.php/AAAI/article/view/5355",
+    pdf_url: "https://ojs.aaai.org/index.php/AAAI/article/view/5355",
     doi_url: "https://doi.org/10.1609/aaai.v34i01.5355",
     bib: true,
   },
@@ -233,9 +233,10 @@ window.PROJECTS = [
     title_en: "1st place — AIO 2nd",  title_ja: "1位 — AIO 第2回",
     desc_en: "Japanese Quiz AI Competition 2021–2022 champion.",
     desc_ja: "日本語クイズAIコンペ2021–2022で優勝。",
-    body_en: "Our team Revo (Takeoka, Akimoto, and Oyamada) won 1st place in AI王 (AI-Ō) 2nd competition, a Japanese Quiz AI competition spanning 2021–2022. We developed a retrieval-based QA system leveraging BERT-based dense retrieval and a cross-encoder reranker over a large Japanese Wikipedia corpus. The system outperformed all other teams in the final evaluation.",
-    body_ja: "チーム Revo（竹岡・秋元・小山田）として、2021–2022年開催の日本語クイズAIコンペ「AI王 第2回」で1位を獲得しました。BERTベースの密ベクトル検索とクロスエンコーダーによるリランキングを日本語Wikipediaコーパスに適用したQAシステムを開発し、最終評価で全チームを上回りました。",
+    body_en: "Our team Revo (Takeoka and Akimoto) won 1st place in the second AI王 (AI-Ō) competition, a Japanese Quiz AI competition held in 2021–2022. We developed a RAG system combining first-stage retrieval with BM25 and BERT-based dense retrieval, cross-encoder reranking, and Fusion-in-Decoder, outperforming all other teams in the final evaluation.",
+    body_ja: "チーム Revo（竹岡・秋元）として、2021–2022年開催の日本語クイズAIコンペ「AI王 第2回」で1位を獲得しました。BM25とBERTベースの密ベクトル検索の一次検索にクロスエンコーダーによるリランキングを加え、Fusion-in-Decoderを使ったRAGシステムを開発し、最終評価で全チームを上回りました。",
     tag: "NLProc, competition", url: "/project/aio2nd/",
+    external_url: "https://sites.google.com/view/project-aio/competition2",
     image: "/project/aio2nd/featured.png",
   },
   {
@@ -313,14 +314,14 @@ window.EXPERIENCE = [
     org: "NEC Corporation", start: "2016-07", end: "2016-08",
     notes_en: "Data profiling: DB systems × NLrocP × ML.",
     notes_ja: "データプロファイリングの研究: 機械学習のデータベース分野への応用",
-    url: "https://archive.dbsj.org/dbjapan/2016/msg00211.html",
+    url: null,
   },
 ];
 
 window.LINKS = [
   { label: "github",  icon: "github",  url: "https://github.com/Kuni88" },
   { label: "scholar", icon: "scholar", url: "https://scholar.google.co.jp/citations?user=A5N_jNsAAAAJ" },
-  { label: "dblp",    icon: "dblp",    url: "https://dblp.org/pid/180/8519.html" },
+  { label: "dblp",    icon: "dblp",    url: "https://dblp.org/pid/245/3596.html" },
   { label: "twitter", icon: "twitter", url: "https://twitter.com/_kuni88" },
   { label: "email",   icon: "mail",    url: "mailto:kunihiro.takeoka.93+contact@gmail.com" },
 ];
