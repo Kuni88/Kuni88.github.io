@@ -3,3 +3,6 @@
 
 # Editor backup files
 *~
+
+# Local build dependencies
+node_modules/

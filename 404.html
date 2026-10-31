@@ -6,51 +6,27 @@
 <meta name="robots" content="noindex" />
 <meta name="theme-color" content="#0D2C54" />
 <title>Page not found — Kunihiro Takeoka</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="/media/white-bear/favicon-32.png" />
 <link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<link rel="stylesheet" href="/css/brand.css" />
+<link rel="stylesheet" href="/css/brand.css?v=unified1" />
+<link rel="stylesheet" href="/css/site.css?v=unified1" />
 <script>
 try {
   document.documentElement.dataset.theme = localStorage.getItem('kuni_theme') === 'dark' ? 'dark' : 'light';
+  document.documentElement.lang = localStorage.getItem('kuni_lang') === 'ja' ? 'ja' : 'en';
 } catch (_) {}
 </script>
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, sans-serif; }
-  .page { max-width: 760px; margin: 0 auto; padding: 40px 24px; }
-  header { display: flex; align-items: center; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-  header .site-mark { margin-right: 0; }
-  header > a:last-child { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 600; }
-  main { padding: 64px 0; }
-  .code { color: var(--fg-dim); font: 13px ui-monospace, monospace; letter-spacing: 2px; }
-  h1 { margin: 16px 0; font-size: clamp(28px, 6vw, 40px); letter-spacing: -1px; }
-  p { color: var(--fg-2); line-height: 1.7; }
-  nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-  nav a { padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; color: var(--fg); background: var(--bg-card); text-decoration: none; font-size: 14px; }
-  nav a:first-child { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-  nav a:hover { border-color: var(--accent); }
-</style>
 </head>
-<body>
-<div class="page">
-  <header>
-    <a class="site-mark" href="/" aria-label="Home"><span class="site-mark-image" aria-hidden="true"></span></a>
-    <a href="/">Kunihiro Takeoka</a>
-  </header>
-  <main>
-    <div class="code">404</div>
-    <h1>Page not found.</h1>
-    <p>This page may have moved. You can find my work and publications below.</p>
-    <nav aria-label="Find another page">
-      <a href="/">Home</a>
-      <a href="/publication/">Publications</a>
-      <a href="/project/">Projects</a>
-      <a href="mailto:kunihiro.takeoka.93+contact@gmail.com">Contact</a>
-    </nav>
-  </main>
-</div>
+<body data-page="not-found">
+<div id="root"></div>
+<noscript><p>JavaScript is required to view this site. / このサイトの表示には JavaScript が必要です。</p><a href="/">Home / ホーム</a></noscript>
+<script defer src="/js/vendor/react.production.min.js"></script>
+<script defer src="/js/vendor/react-dom.production.min.js"></script>
+<script defer src="/js/site-data.js?v=unified1"></script>
+<script defer src="/js/site-app.js?v=unified1"></script>
 </body>
 </html>

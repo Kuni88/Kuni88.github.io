@@ -14,239 +14,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<style>
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,-apple-system,sans-serif;}
-  *{box-sizing:border-box;}a{color:inherit;}
-  .mono{font-family:'JetBrains Mono','Fira Mono',monospace;}
-  @keyframes pulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(2.4);opacity:0}}
-  @keyframes fadeInUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-  .card-hover{transition:border-color 180ms,transform 180ms,box-shadow 180ms;}
-  .card-hover:hover{border-color:var(--accent)!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,0.06);}
-  [data-theme="dark"] .card-hover:hover{box-shadow:0 4px 14px rgba(0,0,0,0.3);}
-  .link-arrow{transition:transform 180ms;display:inline-block;}
-  a:hover .link-arrow{transform:translateX(2px);}
-  .fade-in>*{animation:fadeInUp 380ms ease both;}
-  @media(max-width:900px){.layout{grid-template-columns:1fr!important;}.sidebar{position:static!important;height:auto!important;border-right:none!important;border-bottom:1px solid var(--border);}}
-  ::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
-</style>
+
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="/media/white-bear/favicon-32.png" />
 <link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<link rel="stylesheet" href="/css/brand.css?v=jp-type" />
-</head>
-<body data-pub-id="radevski-2025-acl">
-<div id="root"></div>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="/js/site-data.js?v=jp-affiliation"></script>
-
-<script type="text/babel">
-
-const {PROFILE,PUBLICATIONS,LINKS}=window;
-
-
-function Icon({name,size=16,style}){
-  const s={width:size,height:size,display:"inline-block",verticalAlign:"middle",flexShrink:0,...style};
-  const svg=p=><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" style={s}>{p}</svg>;
-  switch(name){
-    case "github":   return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={s}><path d="M12 .5C5.65.5.5 5.65.5 12.02c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.27.73-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.55 4.56-1.54 7.85-5.86 7.85-10.96C23.5 5.65 18.35.5 12 .5z"/></svg>;
-    case "scholar":  return svg(<><path d="M12 3 2 9l10 6 7.5-4.5"/><path d="M19.5 10.5V15"/><path d="M6 12v3c0 1.5 3 3 6 3s6-1.5 6-3v-3"/></>);
-    case "dblp":     return svg(<><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><circle cx="7.5" cy="7" r="0.8" fill="currentColor"/><circle cx="7.5" cy="17" r="0.8" fill="currentColor"/></>);
-    case "twitter":  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={s}><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>;
-    case "mail":     return svg(<><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></>);
-    case "paper":    return svg(<><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></>);
-    case "sparkle":  return svg(<><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><path d="m6 6 3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></>);
-    case "search":   return svg(<><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></>);
-    case "tag":      return svg(<><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8" r="1.3"/></>);
-    case "question": return svg(<><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.7v.5"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></>);
-    case "tree":     return svg(<><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7.5 7.5 10.5 16.5M16.5 7.5 13.5 16.5"/></>);
-    case "trophy":   return svg(<><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5v2a3 3 0 0 0 3 3M16 6h3v2a3 3 0 0 1-3 3"/><path d="M10 14h4v3h2v3H8v-3h2z"/></>);
-    case "wine":     return svg(<><path d="M7 3h10l-1 7a4 4 0 0 1-8 0z"/><path d="M12 14v6M8 20h8"/></>);
-    case "sticker":  return svg(<><path d="M4 4h12v12l-4 4H4z"/><path d="M16 16h-4v4"/></>);
-    case "code":     return svg(<><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></>);
-    case "moon":     return svg(<><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></>);
-    case "sun":      return svg(<><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></>);
-    case "link":     return svg(<><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></>);
-    case "video":    return svg(<><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></>);
-    case "bib":      return svg(<><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V12"/><path d="M9 9h6M9 13h4"/><path d="M17 3v4M15 5h4"/></>);
-    default: return null;
-  }
-}
-
-function PulseDot(){
-  return <span style={{position:"relative",display:"inline-block",width:8,height:8,flexShrink:0}}>
-    <span style={{position:"absolute",inset:0,borderRadius:"50%",background:"var(--accent)",animation:"pulse 1.8s ease-in-out infinite"}}/>
-    <span style={{position:"absolute",inset:0,borderRadius:"50%",background:"var(--accent)"}}/>
-  </span>;
-}
-function Chip({children,style}){
-  return <span className="mono" style={{display:"inline-block",padding:"1px 8px",fontSize:11,background:"var(--bg-2)",color:"var(--fg-2)",border:"1px solid var(--border)",borderRadius:999,...style}}>{children}</span>;
-}
-function Label({children}){
-  return <div className="mono" style={{fontSize:11,letterSpacing:0.5,textTransform:"uppercase",color:"var(--fg-dim)",marginBottom:8}}>{children}</div>;
-}
-
-function Sidebar({lang,setLang,theme,setTheme,backLabel,backHref}){
-  const p=PROFILE;
-  return (
-    <aside className="sidebar" style={{background:"var(--bg-2)",borderRight:"1px solid var(--border)",padding:"24px 22px",position:"sticky",top:0,height:"100vh",overflowY:"auto",display:"flex",flexDirection:"column"}}>
-      <div className="sidebar-toolbar">
-        <a className="site-mark" href="/" aria-label={lang === "ja" ? "ホーム" : "Home"}>
-          <span className="site-mark-image" aria-hidden="true" />
-        </a>
-        <a className="sidebar-back" href={backHref} style={{display:"flex",alignItems:"center",gap:5,textDecoration:"none",color:"var(--fg-dim)",fontSize:12,fontFamily:"'JetBrains Mono',monospace",letterSpacing:0.3}}>
-          <span style={{fontSize:14}}>←</span><span>{backLabel}</span>
-        </a>
-        <div style={{display:"flex",gap:6}}>
-          <button onClick={()=>setTheme(theme==="dark"?"light":"dark")}
-            style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 8px",borderRadius:6,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:4}}>
-            <Icon name={theme==="dark"?"sun":"moon"} size={13}/>
-          </button>
-          <button onClick={()=>setLang(lang==="en"?"ja":"en")}
-            style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 10px",borderRadius:6,fontFamily:"'JetBrains Mono',monospace",fontSize:11,cursor:"pointer",letterSpacing:0.4}}>
-            {lang==="en"?"EN":"JA"}
-          </button>
-        </div>
-      </div>
-
-      <div style={{display:"flex",alignItems:"flex-start",gap:14}}>
-        <div style={{position:"relative",flexShrink:0}}>
-          <img src="/authors/admin/avatar.png" alt={p.name.en}
-            style={{width:76,height:76,borderRadius:14,objectFit:"cover",display:"block",border:"1px solid var(--border)"}}/>
-          <span style={{position:"absolute",right:-4,bottom:-4,display:"flex",alignItems:"center",justifyContent:"center",width:20,height:20,borderRadius:"50%",background:"var(--bg-2)",border:"2px solid var(--bg-2)"}}>
-            <PulseDot/>
-          </span>
-        </div>
-        <div style={{minWidth:0,paddingTop:2}}>
-          <a href="/" style={{textDecoration:"none",color:"inherit"}}>
-            <div style={{fontSize:18,fontWeight:600,letterSpacing:-0.3,lineHeight:1.2}}>{p.name[lang]}</div>
-          </a>
-          <div className="mono" style={{color:"var(--fg-dim)",fontSize:11.5,marginTop:2}}>/{p.handle}</div>
-          <div style={{color:"var(--fg-2)",fontSize:13,marginTop:5}}>{p.role[lang]}</div>
-          <div style={{fontSize:12,color:"var(--fg-dim)",marginTop:2,lineHeight:1.35}}>{p.org[lang]}</div>
-        </div>
-      </div>
-
-      <div style={{marginTop:18,padding:"11px 13px",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10}}>
-        <div style={{display:"flex",gap:7,alignItems:"center",marginBottom:7}}>
-          <PulseDot/><span className="mono" style={{fontSize:10,letterSpacing:0.6,textTransform:"uppercase",color:"var(--fg-dim)"}}>mission</span>
-        </div>
-        <div style={{fontSize:14,color:"var(--fg)",fontWeight:500,lineHeight:1.5}}>{p.mission[lang]}</div>
-      </div>
-
-      <div style={{marginTop:16}}>
-        <Label>{lang==="en"?"contact":"連絡先"}</Label>
-        {LINKS.map((l,i)=>(
-          <a key={l.label} href={l.url} target={l.url.startsWith("mailto")?"_self":"_blank"} rel="noopener"
-            style={{display:"flex",alignItems:"center",gap:9,padding:"7px 0",textDecoration:"none",color:"inherit",fontSize:12.5,borderTop:i===0?"none":"1px dashed var(--border)"}}>
-            <Icon name={l.icon} size={14} style={{color:"var(--fg-dim)"}}/>
-            <span className="mono" style={{color:"var(--fg-2)",fontSize:11.5}}>{l.label}</span>
-            <span style={{flex:1}}/>
-            <span style={{color:"var(--accent)",fontSize:13}} className="link-arrow">→</span>
-          </a>
-        ))}
-      </div>
-
-      <div style={{flex:1}}/>
-
-    </aside>
-  );
-}
-
-function LinkBtn({href,icon,label}){
-  return(
-    <a href={href} target="_blank" rel="noopener"
-      style={{display:"inline-flex",alignItems:"center",gap:6,padding:"6px 14px",
-              background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:8,
-              textDecoration:"none",color:"var(--fg-2)",fontSize:12.5,fontWeight:500,
-              transition:"border-color 150ms,color 150ms"}}
-      onMouseEnter={e=>{e.currentTarget.style.borderColor="var(--accent)";e.currentTarget.style.color="var(--accent)"}}
-      onMouseLeave={e=>{e.currentTarget.style.borderColor="var(--border)";e.currentTarget.style.color="var(--fg-2)"}}>
-      <Icon name={icon} size={13}/>{label}
-    </a>
-  );
-}
-
-function PubDetail({pub,lang}){
-  const summary=lang==="ja"?(pub.summary_ja||pub.summary_en||""):(pub.summary_en||"");
-  return(
-    <main style={{padding:"40px 44px",maxWidth:760}}>
-      <div className="fade-in">
-        <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap",marginBottom:20}}>
-          <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",width:30,height:30,borderRadius:8,background:"var(--accent-soft)",color:"var(--accent-text)"}}>
-            <Icon name={pub.icon||"paper"} size={15}/>
-          </span>
-          <span className="mono" style={{color:"var(--accent)",fontSize:13,fontWeight:600}}>{pub.venue.replace(/\s+\d{4}$/, "")}</span>
-          <span className="mono" style={{color:"var(--fg-dim)",fontSize:12}}>{pub.month} {pub.year}</span>
-          <span style={{flex:1}}/>
-          <span className="mono" style={{display:"inline-block",padding:"1px 8px",fontSize:11,background:"var(--accent-soft)",color:"var(--accent-text)",border:"1px solid transparent",borderRadius:999}}>{pub.tag}</span>
-        </div>
-
-        <h1 style={{fontSize:22,fontWeight:600,lineHeight:1.35,letterSpacing:-0.3,margin:"0 0 14px",color:"var(--fg)"}}>{pub.title}</h1>
-
-        <div style={{color:"var(--fg-dim)",fontSize:13.5,lineHeight:1.6,marginBottom:22}}>
-          {pub.authors.map((a,i)=>(
-            <React.Fragment key={a+i}>
-              {i>0&&", "}
-              {a==="Kunihiro Takeoka"?<strong style={{color:"var(--fg-2)",fontWeight:600}}>{a}</strong>:a}
-            </React.Fragment>
-          ))}
-        </div>
-
-        {pub.image&&(
-          <div style={{marginBottom:18,border:"1px solid var(--border)",borderRadius:12,overflow:"hidden",background:"var(--bg-card)"}}>
-            <img src={pub.image} alt={pub.title} style={{display:"block",width:"100%",height:"auto"}}/>
-          </div>
-        )}
-
-        {summary&&(
-          <p style={{fontSize:14.5,lineHeight:1.75,color:"var(--fg-2)",margin:"0 0 24px"}}>{summary}</p>
-        )}
-
-        {(pub.pdf_url||pub.doi_url||pub.bib)&&(
-          <div style={{display:"flex",flexWrap:"wrap",gap:8,marginBottom:28}}>
-            {pub.pdf_url&&<LinkBtn href={pub.pdf_url} icon="paper" label="PDF / Paper"/>}
-            {pub.doi_url&&<LinkBtn href={pub.doi_url} icon="link" label="DOI"/>}
-            {pub.bib&&<LinkBtn href={"/publication/"+pub.slug+"/cite.bib"} icon="bib" label="Cite (.bib)"/>}
-          </div>
-        )}
-
-        <div style={{borderTop:"1px solid var(--border)",paddingTop:20}}>
-          <a href="/publication/" style={{display:"inline-flex",alignItems:"center",gap:6,textDecoration:"none",color:"var(--fg-dim)",fontSize:12.5,fontFamily:"'JetBrains Mono',monospace"}}>
-            <span>←</span><span>All publications</span>
-          </a>
-        </div>
-      </div>
-    </main>
-  );
-}
-
-function App(){
-  const pubId=document.body.dataset.pubId;
-  const pub=PUBLICATIONS.find(p=>p.id===pubId);
-  const[lang,setLang]=React.useState(()=>localStorage.getItem("kuni_lang")||"en");
-  const[theme,setTheme]=React.useState(()=>localStorage.getItem("kuni_theme")||"light");
-
-  React.useEffect(()=>{document.documentElement.dataset.theme=theme;localStorage.setItem("kuni_theme",theme);},[theme]);
-  React.useEffect(()=>{localStorage.setItem("kuni_lang",lang);},[lang]);
-  React.useEffect(()=>{if(pub)document.title=pub.title+" — Kunihiro Takeoka";},[pub]);
-
-  if(!pub) return <div style={{padding:40,fontFamily:"monospace",color:"var(--fg-dim)"}}>{lang==="ja"?"論文が見つかりません。":"Publication not found."} <a href="/publication/">{lang==="ja"?"一覧へ戻る":"Back to publications"}</a></div>;
-  const backLabel=lang==="en"?"Publications":"論文一覧";
-  return(
-    <div className="layout" style={{display:"grid",gridTemplateColumns:"280px 1fr",minHeight:"100vh"}}>
-      <Sidebar lang={lang} setLang={setLang} theme={theme} setTheme={setTheme}
-               backLabel={backLabel} backHref="/publication/"/>
-      <PubDetail pub={pub} lang={lang}/>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
-
+<link rel="stylesheet" href="/css/brand.css?v=unified1" />
+<link rel="stylesheet" href="/css/site.css?v=unified1" />
+<script>
+try {
+  document.documentElement.dataset.theme = localStorage.getItem('kuni_theme') === 'dark' ? 'dark' : 'light';
+  document.documentElement.lang = localStorage.getItem('kuni_lang') === 'ja' ? 'ja' : 'en';
+} catch (_) {}
 </script>
+</head>
+<body data-pub-id="radevski-2025-acl" data-page="publication-detail">
+<div id="root"></div>
+<noscript><p>JavaScript is required to view this site. / このサイトの表示には JavaScript が必要です。</p><a href="/">Home / ホーム</a></noscript>
+<script defer src="/js/vendor/react.production.min.js"></script>
+<script defer src="/js/vendor/react-dom.production.min.js"></script>
+<script defer src="/js/site-data.js?v=unified1"></script>
+<script defer src="/js/site-app.js?v=unified1"></script>
 </body>
 </html>
