@@ -20,22 +20,6 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
   * { box-sizing: border-box; }
   a { color: inherit; }
   .mono { font-family: 'JetBrains Mono', 'Fira Mono', monospace; }
-  @keyframes pulse { 0%,100%{transform:scale(1);opacity:.7} 50%{transform:scale(2.4);opacity:0} }
-  @keyframes fadeInUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
-  .card-hover { transition: border-color 180ms, transform 180ms, box-shadow 180ms; }
-  .card-hover:hover { border-color: var(--accent) !important; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
-  [data-theme="dark"] .card-hover:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.3); }
-  .link-arrow { transition: transform 180ms; display: inline-block; }
-  a:hover .link-arrow { transform: translateX(2px); }
-  .fade-in > * { animation: fadeInUp 400ms ease both; }
-  .fade-in > *:nth-child(2){animation-delay:40ms}
-  .fade-in > *:nth-child(3){animation-delay:80ms}
-  .fade-in > *:nth-child(4){animation-delay:120ms}
-  .fade-in > *:nth-child(5){animation-delay:160ms}
-  @media (max-width:900px) {
-    .layout { grid-template-columns: 1fr !important; }
-    .sidebar { position:static !important; height:auto !important; border-right:none !important; border-bottom:1px solid var(--border); }
-  }
   ::-webkit-scrollbar{width:5px;height:5px}
   ::-webkit-scrollbar-track{background:transparent}
   ::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
@@ -46,6 +30,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
 <link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
 <link rel="stylesheet" href="/css/brand.css" />
+<link rel="stylesheet" href="/css/design-experiment.css" />
 </head>
 <body>
 <div id="root"></div>
@@ -59,8 +44,10 @@ const { PROFILE, PUBLICATIONS, PROJECTS, EXPERIENCE, LINKS } = window;
 const T = {
   en: {
     context_window:"context window", items_loaded:"items loaded",
+    eyebrow:"Research & engineering",
     heading:"What I'm building, what I've shipped.",
-    sub:"Most recent work first. Every card links out.",
+    sub:"From agentic AI to information retrieval. A selection of research and things I've built.",
+    explore:"Explore publications", jump_projects:"Browse projects", language:"Switch to Japanese",
     mission:"mission", now:"now", interests:"interests",
     contact:"contact", status:"status", based:"based", active:"active",
     publications:"Publications", projects:"Projects",
@@ -70,7 +57,10 @@ const T = {
   },
   ja: {
     context_window:"コンテキスト", items_loaded:"件読込済",
+    eyebrow:"研究と開発",
     heading:"これまで作ってきたもの",
+    sub:"Agentic AI から情報検索まで。取り組んできた研究と、作ってきたものを紹介します。",
+    explore:"論文を見る", jump_projects:"プロジェクトを見る", language:"Switch to English",
     mission:"ミッション", now:"現在", interests:"関心領域",
     contact:"連絡先", status:"状態", based:"拠点", active:"稼働中",
     publications:"論文", projects:"プロジェクト",
@@ -118,12 +108,7 @@ function Icon({ name, size = 16, style }) {
 
 // ── Primitives ────────────────────────────────────────────────────────────────
 function PulseDot() {
-  return (
-    <span style={{position:"relative",display:"inline-block",width:8,height:8,flexShrink:0}}>
-      <span style={{position:"absolute",inset:0,borderRadius:"50%",background:"var(--accent)",animation:"pulse 1.8s ease-in-out infinite"}} />
-      <span style={{position:"absolute",inset:0,borderRadius:"50%",background:"var(--accent)"}} />
-    </span>
-  );
+  return <span className="status-dot" aria-hidden="true" />;
 }
 function Chip({ children, style }) {
   return <span className="mono" style={{display:"inline-block",padding:"1px 8px",fontSize:11,background:"var(--bg-2)",color:"var(--fg-2)",border:"1px solid var(--border)",borderRadius:999,...style}}>{children}</span>;
@@ -137,22 +122,22 @@ function Sidebar({ lang, setLang, theme, setTheme }) {
   const p = PROFILE;
   const t = T[lang];
   return (
-    <aside className="sidebar" style={{background:"var(--bg-2)",borderRight:"1px solid var(--border)",padding:"24px 22px",position:"sticky",top:0,height:"100vh",overflowY:"auto",display:"flex",flexDirection:"column"}}>
+    <aside className="sidebar profile-sidebar" style={{background:"var(--bg-2)",borderRight:"1px solid var(--border)",padding:"24px 22px",position:"sticky",top:0,height:"100vh",overflowY:"auto",display:"flex",flexDirection:"column"}}>
       <div className="sidebar-toolbar">
         <a className="site-mark" href="/" aria-label={lang === "ja" ? "ホーム" : "Home"}>
           <span className="site-mark-image" aria-hidden="true" />
         </a>
-        <button onClick={() => setTheme(theme==="dark"?"light":"dark")} title={t.toggle_theme}
+        <button onClick={() => setTheme(theme==="dark"?"light":"dark")} title={t.toggle_theme} aria-label={t.toggle_theme} aria-pressed={theme==="dark"}
           style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 8px",borderRadius:6,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:4}}>
           <Icon name={theme==="dark"?"sun":"moon"} size={13} />
         </button>
-        <button onClick={() => setLang(lang==="en"?"ja":"en")}
+        <button aria-label={t.language} onClick={() => setLang(lang==="en"?"ja":"en")}
           style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 10px",borderRadius:6,fontFamily:"'JetBrains Mono',monospace",fontSize:11,cursor:"pointer",letterSpacing:0.4}}>
           {lang==="en"?"EN":"JA"}
         </button>
       </div>
 
-      <div style={{display:"flex",alignItems:"flex-start",gap:14}}>
+      <div className="profile-identity" style={{display:"flex",alignItems:"flex-start",gap:14}}>
         <div style={{position:"relative",flexShrink:0}}>
           <img src="/authors/admin/avatar.png" alt={p.name.en}
             style={{width:76,height:76,borderRadius:14,objectFit:"cover",display:"block",border:"1px solid var(--border)"}} />
@@ -168,7 +153,7 @@ function Sidebar({ lang, setLang, theme, setTheme }) {
         </div>
       </div>
 
-      <div style={{marginTop:18,padding:"11px 13px",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10}}>
+      <div className="mission-panel" style={{marginTop:18,padding:"11px 13px",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10}}>
         <div style={{display:"flex",gap:7,alignItems:"center",marginBottom:7}}>
           <PulseDot />
           <span className="mono" style={{fontSize:10,letterSpacing:0.6,textTransform:"uppercase",color:"var(--fg-dim)"}}>{t.mission}</span>
@@ -223,7 +208,7 @@ function Sidebar({ lang, setLang, theme, setTheme }) {
 // ── Section header ────────────────────────────────────────────────────────────
 function SectionHeader({ icon, title, count, href, seeAllLabel }) {
   return (
-    <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
+    <div className="section-header" style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
       {icon && <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",width:26,height:26,borderRadius:7,background:"var(--accent-soft)",color:"var(--accent-text)"}}>
         <Icon name={icon} size={14} />
       </span>}
@@ -239,7 +224,7 @@ function SectionHeader({ icon, title, count, href, seeAllLabel }) {
 function PubCard({ p, density }) {
   const pad = density==="compact"?"11px 14px":"15px 18px";
   return (
-    <a href={p.url} target="_blank" rel="noopener" className="card-hover"
+    <a href={p.url} target="_blank" rel="noopener" className="card-hover publication-card"
       style={{display:"block",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad,textDecoration:"none",color:"inherit"}}>
       <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
         <Icon name={p.icon||"paper"} size={13} style={{color:"var(--accent)"}} />
@@ -279,23 +264,27 @@ function ProjectCard({ p, lang, density }) {
     </>
   );
   return p.url
-    ? <a href={p.url} target="_blank" rel="noopener" className="card-hover"
+    ? <a href={p.url} target="_blank" rel="noopener" className="card-hover project-tile"
         style={{display:"block",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad,textDecoration:"none",color:"inherit"}}>{inner}</a>
-    : <div className="card-hover" style={{background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad}}>{inner}</div>;
+    : <div className="project-tile" style={{background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad}}>{inner}</div>;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 function Main({ lang, density }) {
   const t = T[lang];
-  const totalItems = PUBLICATIONS.length + PROJECTS.length + EXPERIENCE.length + PROFILE.education.length;
   return (
-    <main style={{padding:"26px 32px 80px",maxWidth:860}} className="fade-in">
-      <header style={{marginBottom:28}}>
-        <h1 style={{fontSize:30,fontWeight:600,letterSpacing:-0.6,margin:"0 0 6px",lineHeight:1.2,maxWidth:680}}>{t.heading}</h1>
-        <div style={{color:"var(--fg-dim)",fontSize:14,maxWidth:580,lineHeight:1.5}}>{t.sub}</div>
+    <main id="main-content" tabIndex={-1} className="portfolio-main">
+      <header className="portfolio-intro">
+        <div className="intro-eyebrow mono">{t.eyebrow}</div>
+        <h1>{t.heading}</h1>
+        <p className="intro-description">{t.sub}</p>
+        <nav className="intro-actions" aria-label={lang==="ja"?"ページ内ナビゲーション":"On this page"}>
+          <a className="primary-action" href="#publications">{t.explore}<span aria-hidden="true">↗</span></a>
+          <a className="secondary-action" href="#projects">{t.jump_projects}<span aria-hidden="true">↓</span></a>
+        </nav>
       </header>
 
-      <section style={{marginTop:24}}>
+      <section id="publications">
         <SectionHeader icon="paper" title={t.publications} count={PUBLICATIONS.length}
           href="/publication/" seeAllLabel={t.see_all} />
         <div style={{display:"grid",gap:8}}>
@@ -303,9 +292,9 @@ function Main({ lang, density }) {
         </div>
       </section>
 
-      <section style={{marginTop:32}}>
+      <section id="projects">
         <SectionHeader icon="hammer" title={t.projects} count={PROJECTS.length} />
-        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(250px,1fr))",gap:8}}>
+        <div className="project-grid">
           {PROJECTS.map(p => <ProjectCard key={p.id} p={p} lang={lang} density={density} />)}
         </div>
       </section>
@@ -316,7 +305,7 @@ function Main({ lang, density }) {
           {EXPERIENCE.map((e,i) => {
             const current = !e.end;
             const row = (
-              <div key={i} style={{padding:"13px 18px",borderTop:i===0?"none":"1px solid var(--border-2)",display:"grid",gridTemplateColumns:"140px 1fr",gap:16,alignItems:"start"}}>
+              <div key={i} className="experience-row" style={{padding:"13px 18px",borderTop:i===0?"none":"1px solid var(--border-2)",display:"grid",gridTemplateColumns:"140px 1fr",gap:16,alignItems:"start"}}>
                 <div className="mono" style={{color:"var(--fg-dim)",fontSize:11.5,display:"flex",alignItems:"center",gap:7}}>
                   {current ? <PulseDot /> : <Icon name="briefcase" size={11} style={{color:"var(--fg-dim)"}} />}
                   <span>{e.start} → {e.end||t.present}</span>
@@ -368,10 +357,12 @@ function App() {
 
   React.useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
+    document.documentElement.lang = lang === "ja" ? "ja" : "en";
+  }, [theme, lang]);
 
   return (
-    <div className="layout" style={{display:"grid",gridTemplateColumns:"330px 1fr",minHeight:"100vh"}}>
+    <div className="layout">
+      <a className="skip-link" href="#main-content">{lang==="ja"?"本文へ移動":"Skip to content"}</a>
       <Sidebar lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
       <Main lang={lang} density="normal" />
     </div>

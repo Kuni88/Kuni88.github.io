@@ -1,0 +1,87 @@
+/* Local Emil design engineering trial: typography, surfaces, and purposeful feedback. */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --surface-shadow: 0 0 0 1px rgb(13 44 84 / 7%), 0 2px 3px rgb(13 44 84 / 3%);
+  --hover-shadow: 0 0 0 1px rgb(13 44 84 / 18%), 0 5px 16px rgb(13 44 84 / 6%);
+}
+[data-theme="dark"] {
+  --surface-shadow: 0 0 0 1px rgb(255 251 243 / 10%), 0 2px 4px rgb(0 0 0 / 12%);
+  --hover-shadow: 0 0 0 1px rgb(182 205 229 / 28%), 0 5px 16px rgb(0 0 0 / 18%);
+}
+body { -webkit-font-smoothing: antialiased; }
+button, a { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+button { font: inherit; }
+.layout { display: grid; grid-template-columns: 312px minmax(0, 1fr); min-height: 100svh; }
+.profile-sidebar { height: 100svh !important; padding: 28px 24px !important; }
+.profile-identity { flex-direction: column; gap: 18px !important; }
+.profile-identity img { width: 84px !important; height: 84px !important; border-radius: 20px !important; }
+.profile-identity > div:last-child > div:first-child { font-size: 23px !important; letter-spacing: -.7px !important; }
+.sidebar-toolbar { margin-bottom: 32px; }
+.sidebar-toolbar button { min-width: 36px; min-height: 36px; justify-content: center; box-shadow: 0 1px 2px rgb(13 44 84 / 3%); }
+.mission-panel { margin-top: 24px !important; padding: 16px !important; border: 0 !important; box-shadow: var(--surface-shadow); }
+.status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.portfolio-main { min-width: 0; width: 100%; max-width: 1104px; padding: 64px clamp(24px, 4.5vw, 72px) 88px; }
+.portfolio-intro { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--border); }
+.intro-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 1.7px; color: var(--fg-dim); margin-bottom: 20px; }
+.portfolio-intro h1 { font-size: clamp(32px, 3.4vw, 48px); line-height: 1.13; font-weight: 500; letter-spacing: -.055em; text-wrap: balance; margin: 0; max-width: 670px; }
+.intro-description { color: var(--fg-dim); font-size: 15px; line-height: 1.7; max-width: 490px; margin: 18px 0 24px; text-wrap: pretty; }
+.intro-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.intro-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 42px; padding: 10px 16px; border-radius: 8px; font-size: 12px; font-weight: 500; text-decoration: none; }
+.primary-action { background: var(--fg); color: var(--bg); box-shadow: 0 2px 4px rgb(13 44 84 / 12%); }
+.secondary-action { color: var(--fg-2); }
+.portfolio-main section { scroll-margin-top: 28px; }
+.portfolio-main section + section { margin-top: 40px !important; }
+.section-header { margin-bottom: 18px !important; }
+.section-header h2 { font-size: 17px !important; }
+.section-header > .mono { font-variant-numeric: tabular-nums; }
+.section-header a { min-height: 36px; display: inline-flex; align-items: center; }
+.publication-card, .project-tile { border: 0 !important; box-shadow: var(--surface-shadow); }
+.publication-card { padding: 20px 22px !important; }
+.publication-card > div:nth-child(2) { font-size: 16px !important; line-height: 1.5 !important; margin-top: 10px !important; letter-spacing: -.2px; }
+.publication-card > div:nth-child(3) { line-height: 1.65 !important; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.project-tile { padding: 20px !important; }
+.project-tile > div:first-child { flex-wrap: wrap; }
+.project-tile > div:first-child > span:last-child { flex-basis: 100%; font-size: 15px !important; margin-top: 2px; }
+.project-tile > div:nth-child(2) { line-height: 1.65 !important; }
+.experience-row { grid-template-columns: 160px minmax(0, 1fr) !important; padding: 18px !important; }
+.card-hover, .intro-actions a, .sidebar-toolbar button, .site-mark {
+  transition: transform 160ms var(--ease-out), box-shadow 160ms ease, background-color 160ms ease;
+}
+.link-arrow { display: inline-block; transition: transform 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  a.publication-card:hover, a.project-tile:hover { box-shadow: var(--hover-shadow); transform: translateY(-1px); }
+  .sidebar-toolbar button:hover, .secondary-action:hover { background: var(--accent-soft) !important; }
+  a:hover .link-arrow { transform: translateX(2px); }
+}
+/* Press feedback only for pointer input; keyboard navigation stays immediate. */
+.intro-actions a:active:not(:focus-visible), .sidebar-toolbar button:active:not(:focus-visible),
+.site-mark:active:not(:focus-visible), a.publication-card:active:not(:focus-visible), a.project-tile:active:not(:focus-visible) { transform: scale(.98); }
+a:focus-visible, button:focus-visible { transition: none; }
+.skip-link { position: fixed; left: 16px; top: 16px; z-index: 10; padding: 12px 18px; border-radius: 8px; background: var(--fg); color: var(--bg); transform: translateY(-180%); }
+.skip-link:focus { transform: none; }
+@media (max-width: 1000px) {
+  .layout { grid-template-columns: 284px minmax(0, 1fr); }
+  .portfolio-main { padding: 44px 28px 64px; }
+  .project-grid { grid-template-columns: minmax(0, 1fr); }
+  .experience-row { grid-template-columns: minmax(0, 1fr) !important; gap: 8px !important; }
+}
+@media (max-width: 760px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .profile-sidebar { position: static !important; height: auto !important; border-right: 0 !important; border-bottom: 1px solid var(--border); padding: 20px 24px 28px !important; }
+  .profile-identity { flex-direction: row; align-items: center !important; }
+  .sidebar-toolbar { margin-bottom: 20px; }
+  .portfolio-main { padding: 36px 24px 60px; }
+  .portfolio-intro { padding-bottom: 28px; margin-bottom: 28px; }
+  .portfolio-intro h1 { font-size: clamp(32px, 7vw, 42px); }
+  .publication-card { padding: 18px !important; }
+  .publication-card > div:first-child { gap: 8px !important; }
+}
+@media (max-width: 360px) {
+  .profile-identity { flex-direction: column; align-items: flex-start !important; }
+  .portfolio-main { padding-inline: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  a.publication-card:hover, a.project-tile:hover, a:active, button:active, .link-arrow { transform: none !important; }
+}
