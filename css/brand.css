@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
+
 /* Shared palette drawn from the supplied bear logo kit. */
 :root {
   color-scheme: light;
@@ -104,3 +106,7 @@ button:focus-visible {
     transition: none !important;
   }
 }
+
+/* A shared Japanese glyph family for the home, archives, and detail pages. */
+body { font-family: 'Geist', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif !important; }
+html[lang="ja"] body { font-family: 'Noto Sans JP', 'Geist', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif !important; }

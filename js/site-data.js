@@ -5,11 +5,11 @@ window.PROFILE = {
   name: { en: "Kunihiro Takeoka", ja: "竹岡 邦紘" },
   handle: "kuni88",
   role: { en: "Senior Principal Researcher", ja: "主幹研究員" },
-  org: { en: "NEC Corporation — Data Science Laboratory", ja: "NEC データサイエンスラボラトリー" },
+  org: { en: "NEC Corporation — AI Technology Service Division and Knowledge Science Laboratory", ja: "NEC — AIテクノロジーサービス部門・ナレッジサイエンス研究所" },
   location: "Tokyo, Japan",
   status: {
-    en: "active · building cotomi Agent · open to collab",
-    ja: "稼働中 · cotomi Agent 開発 · 共同研究歓迎",
+    en: "Building NEC cotomi Agent · open to collaboration",
+    ja: "NEC cotomi Agent を開発中。共同研究も歓迎しています。",
   },
   mission: {
     en: "A world where people can focus on the work they want to do.",
@@ -17,23 +17,23 @@ window.PROFILE = {
   },
   now: {
       en: [
-	  "Building Agentic AI, cotomi Agent",
+	  "Building Agentic AI, NEC cotomi Agent",
 	  "Building NEC's cotomi LLM series",
 	  "LLM-based retrieval & recommendation",
     ],
       ja: [
-	  "Agentic AI 'cotomi Agent' の開発",
-	  "NECのLLM (cotomi) シリーズの開発",
+	  "NEC cotomi Agent の開発",
+	  "NEC の大規模言語モデル「cotomi」シリーズの開発",
 	  "LLM を活用した検索・推薦",
     ],
   },
   interests: {
-    en: ["Machine Learning", "NLProc", "Human-Computer Interaction", "Information Retrieval"],
-    ja: ["機械学習", "自然言語処理", "HCI", "情報検索"],
+    en: ["Machine Learning", "NLProc", "Human–Computer Interaction", "Information Retrieval"],
+    ja: ["機械学習", "自然言語処理", "Human–Computer Interaction", "情報検索"],
   },
   education: [
-    { degree_en: "MEng, Computer Science", degree_ja: "修士(工学)、情報科学", year: "2018", school_en: "Kwansei Gakuin University", school_ja: "関西学院大学" },
-    { degree_en: "BSc, Computer Science",  degree_ja: "学士(工学)、情報科学", year: "2016", school_en: "Kwansei Gakuin University", school_ja: "関西学院大学" },
+    { degree_en: "MEng, Computer Science", degree_ja: "修士（工学）・情報科学", year: "2018", school_en: "Kwansei Gakuin University", school_ja: "関西学院大学" },
+    { degree_en: "BSc, Computer Science",  degree_ja: "学士（工学）・情報科学", year: "2016", school_en: "Kwansei Gakuin University", school_ja: "関西学院大学" },
   ],
 };
 
@@ -46,7 +46,7 @@ window.PUBLICATIONS = [
     tag: "Agentic AI · Demo", icon: "sparkle",
     url: "/publication/oyamada-2026-cais/",
     summary_en: "Demo of a browser agent that passively observes user behavior to build shared organizational knowledge, then uses it to autonomously automate multi-step digital tasks. Achieves 80.4% on WebArena, exceeding the reported human baseline.",
-    summary_ja: "ユーザの操作を観察して組織的な業務知識を自動構築し、その知識でマルチステップのデジタル業務を自律的に自動化するブラウザエージェント cotomi Agentのデモペーパーです。WebArena で 80.4% を達成し、報告されている人間のベースラインを超えています。",
+    summary_ja: "ユーザの操作を観察して組織的な業務知識を自動構築し、その知識でマルチステップのデジタル業務を自律的に自動化するブラウザエージェント NEC cotomi Agentのデモペーパーです。WebArena で 80.4% を達成し、報告されている人間のベースラインを超えています。",
     pdf_url: "https://www.caisconf.org/program/2026/demos/cotomi-act/",
   },
   {
@@ -193,11 +193,11 @@ window.PUBLICATIONS = [
 window.PROJECTS = [
   {
     id: "cotomi-act", slug: "cotomi-act", year: 2026, icon: "bot",
-    title_en: "cotomi Agent Development",  title_ja: "cotomi Agent 開発",
+    title_en: "NEC cotomi Agent Development",  title_ja: "NEC cotomi Agent 開発",
     desc_en: "Developing NEC's agent technology for continuous automation of digital operations.",
     desc_ja: "デジタル業務の継続的な自動化を実現するNECのエージェント技術を開発。",
-    body_en: "cotomi Agent is NEC's agent technology for automating digital operations that require judgment and adaptive responses, such as expense reimbursement, order processing, and screening workflows. According to NEC's December 3, 2025 press release, the solution automatically extracts operational know-how from browser histories and action logs, turns it into organizational assets, and uses that knowledge to drive safe and reliable automation at scale.",
-    body_ja: "cotomi Agent は、経費精算、受発注、審査業務のように、判断や臨機応変な対応が求められるデジタル業務を自動化するための NEC のエージェント技術です。2025年12月3日の NEC 公式プレスリリースでは、ブラウザ上の閲覧履歴や操作ログから業務ノウハウを自動抽出して組織資産化し、その知識を用いて安全・安心に業務自動化を継続的に推進するソリューションとして説明されています。",
+    body_en: "NEC cotomi Agent is NEC's agent technology for automating digital operations that require judgment and adaptive responses, such as expense reimbursement, order processing, and screening workflows. According to NEC's December 3, 2025 press release, the solution automatically extracts operational know-how from browser histories and action logs, turns it into organizational assets, and uses that knowledge to drive safe and reliable automation at scale.",
+    body_ja: "NEC cotomi Agent は、経費精算、受発注、審査業務のように、判断や臨機応変な対応が求められるデジタル業務を自動化するための NEC のエージェント技術です。2025年12月3日の NEC 公式プレスリリースでは、ブラウザ上の閲覧履歴や操作ログから業務ノウハウを自動抽出して組織資産化し、その知識を用いて安全・安心に業務自動化を継続的に推進するソリューションとして説明されています。",
     tag: "Agentic AI, automation", url: "https://jpn.nec.com/press/202512/20251203_01.html",
   },
   {
@@ -246,7 +246,7 @@ window.PROJECTS = [
     desc_ja: "ユーザを酔っぱらった風に見せるMacアプリ。遊び心のあるHCIハッカソン作品。",
     body_en: "Yotta Free is a Mac app that applies a real-time drunk visual effect to your FaceTime or video call feed. Built as a hackathon project for the HCI course, it uses macOS screen capture and Core Image filters to simulate the blurred, wobbly vision associated with intoxication. A tongue-in-cheek exploration of presence manipulation in video communication.",
     body_ja: "Yotta Free は、FaceTime やビデオ通話の映像にリアルタイムで「酔っぱらい風エフェクト」を適用するMacアプリです。HCI演習のハッカソン課題として制作し、macOS のスクリーンキャプチャと Core Image フィルターを使用して、ぼやけや揺れのある映像を生成します。ビデオコミュニケーションにおける「存在感の操作」という視点からの遊び心のある探求です。",
-    tag: "HCI, macOS", url: "/project/yotta_free/",
+    tag: "personal, HCI, macOS", url: "/project/yotta_free/",
     image: "/project/yotta_free/featured.jpeg",
     video_url: "https://youtu.be/lXl-brlEuRw?t=8751",
   },
@@ -257,7 +257,7 @@ window.PROJECTS = [
     desc_ja: "対象語と感情から即興でステッカーを生成するシステム。",
     body_en: "Insticker is a system for instantly generating a sticker from a target word and an emotion label. The user inputs a keyword (e.g., \"cat\") and selects an emotion (e.g., \"angry\"), and the system synthesizes an expressive sticker image by combining image retrieval and style transfer. Demonstrated at HCI conference.",
     body_ja: "Insticker は、対象語と感情ラベルから即興でステッカーを生成するシステムです。ユーザーがキーワード（例：「猫」）と感情（例：「怒り」）を入力すると、画像検索とスタイル転送を組み合わせて表情豊かなステッカー画像を合成します。HCI系学会にて発表。",
-    tag: "HCI, generation", url: "/project/insticker/",
+    tag: "personal, HCI, generation", url: "/project/insticker/",
     image: "/project/insticker/featured.jpg",
     video_url: "https://youtu.be/HNjXZwRTybU?t=10743",
   },
@@ -268,7 +268,7 @@ window.PROJECTS = [
     desc_ja: "オンラインペアプログラミングと映像通信のWebアプリ。",
     body_en: "HELLO WORLD! is a web application for online pair programming with real-time video communication. It provides a shared code editor with syntax highlighting and a peer video window side by side, enabling remote collaborators to code together as if sitting next to each other. Built during undergraduate years as an exploration of real-time collaborative tools.",
     body_ja: "HELLO WORLD! は、リアルタイム映像通信付きのオンラインペアプログラミング用Webアプリです。シンタックスハイライト付きの共有コードエディタとピアビデオウィンドウを並べて提供し、離れた場所にいる共同作業者が隣に座っているかのようにコードを書けます。学部時代にリアルタイム協調ツールの探求として制作しました。",
-    tag: "collab,  web, coding", url: "/project/hello-world/",
+    tag: "personal, collab, web, coding", url: "/project/hello-world/",
     image: "/project/hello-world/featured.png",
   },
 ];
@@ -277,8 +277,8 @@ window.EXPERIENCE = [
   {
     title_en: "Senior Principal Researcher", title_ja: "主幹研究員",
     org: "NEC Corporation", start: "2026-04", end: null,
-    notes_en: "Product Manager for cotomi Agent.",
-    notes_ja: "cotomi Agent のプロダクトマネージャー",
+    notes_en: "Product Manager for NEC cotomi Agent.",
+    notes_ja: "NEC cotomi Agent のプロダクトマネージャー",
     url: null,
   },
   {

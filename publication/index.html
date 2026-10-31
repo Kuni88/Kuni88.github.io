@@ -45,14 +45,14 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
 <link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<link rel="stylesheet" href="/css/brand.css" />
+<link rel="stylesheet" href="/css/brand.css?v=jp-type" />
 </head>
 <body>
 <div id="root"></div>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
-<script src="/js/site-data.js"></script>
+<script src="/js/site-data.js?v=jp-affiliation"></script>
 <script type="text/babel">
 const { PROFILE, PUBLICATIONS, LINKS } = window;
 
@@ -60,14 +60,14 @@ const T = {
   en: {
     mission:"mission", now:"now", interests:"interests", contact:"contact", status:"status",
     based:"based", present:"present", toggle_theme:"toggle theme",
-    section:"Publications", heading:"Research output, newest first.",
-    footer:"Last indexed 2026-04-19.", back:"home →", latest:"latest"
+    section:"Publications", heading:"Publications",
+    back:"home →", latest:"latest"
   },
   ja: {
-    mission:"ミッション", now:"現在", interests:"関心領域", contact:"連絡先", status:"状態",
+    mission:"目指していること", now:"取り組んでいること", interests:"研究分野", contact:"連絡先", status:"状態",
     based:"拠点", present:"現在", toggle_theme:"テーマ切替",
     section:"論文一覧", heading:"論文",
-    footer:"最終更新 2026-04-19.", back:"home →", latest:"最新"
+    back:"ホームへ →", latest:"最新"
   }
 };
 
@@ -195,7 +195,7 @@ function Sidebar({ lang, setLang, theme, setTheme }) {
 
       <div style={{flex:1}} />
       <a href="/" className="mono" style={{marginTop:18,color:"var(--accent)",textDecoration:"none",fontSize:12}}>{t.back}</a>
-      <div className="mono" style={{marginTop:12,fontSize:10,color:"var(--fg-dim)",letterSpacing:0.3}}>{t.footer}</div>
+
     </aside>
   );
 }
@@ -211,14 +211,14 @@ function SectionHeader({ icon, title, count }) {
     </div>
   );
 }
-function PubCard({ p, lang, first }) {
+function PubCard({ p, lang }) {
   return (
     <a href={p.url} className="card-hover" style={{display:"block",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:"15px 18px",textDecoration:"none",color:"inherit"}}>
       <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
         <Icon name={p.icon||"paper"} size={13} style={{color:"var(--accent)"}} />
-        <span className="mono" style={{color:"var(--accent)",fontSize:12,fontWeight:600}}>{p.venue}</span>
+        <span className="mono" style={{color:"var(--accent)",fontSize:12,fontWeight:600}}>{p.venue.replace(/\s+\d{4}$/, "")}</span>
         <Chip style={{background:"var(--accent-soft)",color:"var(--accent-text)",borderColor:"transparent"}}>{p.tag}</Chip>
-        {first && <Chip style={{borderColor:"transparent",background:"#fde68a",color:"#713f12"}}>{T[lang].latest}</Chip>}
+
         <span style={{flex:1}} />
         <span className="mono" style={{color:"var(--fg-dim)",fontSize:11.5}}>{p.year} · {p.month}</span>
       </div>
@@ -234,12 +234,11 @@ function Main({ lang }) {
     <main style={{padding:"26px 32px 80px",maxWidth:860}} className="fade-in">
       <header style={{marginBottom:28}}>
         <h1 style={{fontSize:30,fontWeight:600,letterSpacing:-0.6,margin:"0 0 6px",lineHeight:1.2,maxWidth:680}}>{t.heading}</h1>
-        <div style={{color:"var(--fg-dim)",fontSize:14,maxWidth:580,lineHeight:1.5}}>{t.sub}</div>
       </header>
       <section style={{marginTop:24}}>
-        <SectionHeader icon="paper" title={t.section} count={PUBLICATIONS.length} />
+
         <div style={{display:"grid",gap:8}}>
-          {PUBLICATIONS.map((p, i) => <PubCard key={p.id} p={p} lang={lang} first={i===0} />)}
+          {PUBLICATIONS.map(p => <PubCard key={p.id} p={p} lang={lang} />)}
         </div>
       </section>
     </main>

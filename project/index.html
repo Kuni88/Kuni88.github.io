@@ -45,14 +45,14 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
 <link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<link rel="stylesheet" href="/css/brand.css" />
+<link rel="stylesheet" href="/css/brand.css?v=jp-type" />
 </head>
 <body>
 <div id="root"></div>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
-<script src="/js/site-data.js"></script>
+<script src="/js/site-data.js?v=jp-affiliation"></script>
 <script type="text/babel">
 const { PROFILE, PROJECTS, LINKS } = window;
 
@@ -60,16 +60,16 @@ const T = {
   en: {
     mission:"mission", now:"now", interests:"interests", contact:"contact", status:"status",
     based:"based", toggle_theme:"toggle theme",
-    section:"Projects", heading:"Selected builds, demos, and competition work.",
-    sub:"Same data, same visual system as the main page, but focused on project browsing.",
-    footer:"Last indexed 2026-04-19.", back:"home →", latest:"latest"
+    section:"Projects", heading:"Projects",
+    sub:"Research, development, and personal projects.",
+    back:"home →", latest:"latest"
   },
   ja: {
-    mission:"ミッション", now:"現在", interests:"関心領域", contact:"連絡先", status:"状態",
+    mission:"目指していること", now:"取り組んでいること", interests:"研究分野", contact:"連絡先", status:"状態",
     based:"拠点", toggle_theme:"テーマ切替",
-    section:"プロジェクト一覧", heading:"制作物・デモ・競技実績を一覧化。",
-    sub:"メインページと同じデータと見た目を保ちながら、プロジェクト閲覧に寄せています。",
-    footer:"最終更新 2026-04-19.", back:"home →", latest:"最新"
+    section:"プロジェクト一覧", heading:"プロジェクト",
+    sub:"研究開発から個人制作まで、これまでの取り組みを紹介します。",
+    back:"ホームへ →", latest:"最新"
   }
 };
 
@@ -198,7 +198,7 @@ function Sidebar({ lang, setLang, theme, setTheme }) {
 
       <div style={{flex:1}} />
       <a href="/" className="mono" style={{marginTop:18,color:"var(--accent)",textDecoration:"none",fontSize:12}}>{t.back}</a>
-      <div className="mono" style={{marginTop:12,fontSize:10,color:"var(--fg-dim)",letterSpacing:0.3}}>{t.footer}</div>
+
     </aside>
   );
 }
@@ -214,7 +214,7 @@ function SectionHeader({ icon, title, count }) {
     </div>
   );
 }
-function ProjectCard({ p, lang, first }) {
+function ProjectCard({ p, lang }) {
   const title = lang==="en" ? p.title_en : p.title_ja;
   const desc = lang==="en" ? p.desc_en : p.desc_ja;
   return (
@@ -226,7 +226,7 @@ function ProjectCard({ p, lang, first }) {
         </span>
         <span className="mono" style={{color:"var(--fg-dim)",fontSize:11.5}}>{p.year}</span>
         <Chip>{p.tag}</Chip>
-        {first && <Chip style={{borderColor:"transparent",background:"#fde68a",color:"#713f12"}}>{T[lang].latest}</Chip>}
+
       </div>
       <div style={{marginTop:10,fontSize:15,fontWeight:500,lineHeight:1.45}}>{title}</div>
       <div style={{marginTop:7,color:"var(--fg-2)",fontSize:13,lineHeight:1.55}}>{desc}</div>
@@ -242,9 +242,9 @@ function Main({ lang }) {
         <div style={{color:"var(--fg-dim)",fontSize:14,maxWidth:580,lineHeight:1.5}}>{t.sub}</div>
       </header>
       <section style={{marginTop:24}}>
-        <SectionHeader icon="hammer" title={t.section} count={PROJECTS.length} />
+
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(250px,1fr))",gap:8}}>
-          {PROJECTS.map((p, i) => <ProjectCard key={p.id} p={p} lang={lang} first={i===0} />)}
+          {PROJECTS.map(p => <ProjectCard key={p.id} p={p} lang={lang} />)}
         </div>
       </section>
     </main>

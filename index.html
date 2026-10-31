@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kunihiro Takeoka — Senior Principal Researcher, NEC</title>
-<meta name="description" content="Senior Principal Researcher at NEC Corporation Data Science Laboratory. Research in NLP, Information Retrieval, and Human-Computer Interaction. Building NEC's cotomi LLM series." />
+<title>Kunihiro Takeoka — Researcher / Engineer</title>
+<meta name="description" content="Senior Principal Researcher at NEC Corporation, AI Technology Service Division and Knowledge Science Laboratory. Research in NLP, Information Retrieval, and Human-Computer Interaction. Building NEC's cotomi LLM series." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Kunihiro Takeoka" />
-<meta property="og:description" content="Senior Principal Researcher, NEC Corporation — Data Science Laboratory" />
+<meta property="og:description" content="Senior Principal Researcher, NEC Corporation — AI Technology Service Division and Knowledge Science Laboratory" />
 <meta property="og:url" content="https://kuni88.github.io/" />
 <meta property="og:image" content="https://kuni88.github.io/media/white-bear/icon-512.png" />
 <meta property="twitter:card" content="summary" />
@@ -29,47 +29,28 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
 <link rel="icon" type="image/svg+xml" sizes="any" href="/media/white-bear/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/media/white-bear/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<link rel="stylesheet" href="/css/brand.css" />
-<link rel="stylesheet" href="/css/design-experiment.css" />
+<link rel="stylesheet" href="/css/brand.css?v=jp-type" />
+<link rel="stylesheet" href="/css/design-experiment.css?v=content-cleanup2" />
 </head>
 <body>
 <div id="root"></div>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="/js/site-data.js"></script>
+<script src="/js/site-data.js?v=jp-affiliation"></script>
 <script type="text/babel">
 const { PROFILE, PUBLICATIONS, PROJECTS, EXPERIENCE, LINKS } = window;
 
 const T = {
   en: {
-    context_window:"context window", items_loaded:"items loaded",
-    eyebrow:"Research & engineering",
-    heading:"What I'm building, what I've shipped.",
-    sub:"From agentic AI to information retrieval. A selection of research and things I've built.",
-    explore:"Explore publications", jump_projects:"Browse projects", language:"Switch to Japanese",
-    mission:"mission", now:"now", interests:"interests",
-    contact:"contact", status:"status", based:"based", active:"active",
-    publications:"Publications", projects:"Projects",
-    experience:"Experience", education:"Education",
-    present:"present", footer:"Last indexed 2026-04-19.",
-    see_all:"see all →", toggle_theme:"toggle theme",
+    language:"Switch to Japanese", publications:"Publications", projects:"Projects",
+    experience:"Experience", education:"Education", present:"present", toggle_theme:"toggle theme",
   },
   ja: {
-    context_window:"コンテキスト", items_loaded:"件読込済",
-    eyebrow:"研究と開発",
-    heading:"これまで作ってきたもの",
-    sub:"Agentic AI から情報検索まで。取り組んできた研究と、作ってきたものを紹介します。",
-    explore:"論文を見る", jump_projects:"プロジェクトを見る", language:"Switch to English",
-    mission:"ミッション", now:"現在", interests:"関心領域",
-    contact:"連絡先", status:"状態", based:"拠点", active:"稼働中",
-    publications:"論文", projects:"プロジェクト",
-    experience:"職歴", education:"学歴",
-    present:"現在", footer:"最終更新 2026-04-19.",
-    see_all:"すべて見る →", toggle_theme:"テーマ切替",
+    language:"Switch to English", publications:"論文", projects:"プロジェクト",
+    experience:"職歴", education:"学歴", present:"現在", toggle_theme:"テーマ切替",
   }
 };
-
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 function Icon({ name, size = 16, style }) {
@@ -107,244 +88,110 @@ function Icon({ name, size = 16, style }) {
 }
 
 // ── Primitives ────────────────────────────────────────────────────────────────
-function PulseDot() {
-  return <span className="status-dot" aria-hidden="true" />;
-}
 function Chip({ children, style }) {
   return <span className="mono" style={{display:"inline-block",padding:"1px 8px",fontSize:11,background:"var(--bg-2)",color:"var(--fg-2)",border:"1px solid var(--border)",borderRadius:999,...style}}>{children}</span>;
 }
-function Label({ children }) {
-  return <div className="mono" style={{fontSize:11,letterSpacing:0.5,textTransform:"uppercase",color:"var(--fg-dim)",marginBottom:8}}>{children}</div>;
-}
-
 // ── Sidebar ───────────────────────────────────────────────────────────────────
-function Sidebar({ lang, setLang, theme, setTheme }) {
-  const p = PROFILE;
+function SiteHeader({ lang, setLang, theme, setTheme }) {
   const t = T[lang];
-  return (
-    <aside className="sidebar profile-sidebar" style={{background:"var(--bg-2)",borderRight:"1px solid var(--border)",padding:"24px 22px",position:"sticky",top:0,height:"100vh",overflowY:"auto",display:"flex",flexDirection:"column"}}>
-      <div className="sidebar-toolbar">
-        <a className="site-mark" href="/" aria-label={lang === "ja" ? "ホーム" : "Home"}>
-          <span className="site-mark-image" aria-hidden="true" />
-        </a>
-        <button onClick={() => setTheme(theme==="dark"?"light":"dark")} title={t.toggle_theme} aria-label={t.toggle_theme} aria-pressed={theme==="dark"}
-          style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 8px",borderRadius:6,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:4}}>
-          <Icon name={theme==="dark"?"sun":"moon"} size={13} />
-        </button>
-        <button aria-label={t.language} onClick={() => setLang(lang==="en"?"ja":"en")}
-          style={{background:"transparent",color:"var(--fg-2)",border:"1px solid var(--border)",padding:"3px 10px",borderRadius:6,fontFamily:"'JetBrains Mono',monospace",fontSize:11,cursor:"pointer",letterSpacing:0.4}}>
-          {lang==="en"?"EN":"JA"}
-        </button>
-      </div>
-
-      <div className="profile-identity" style={{display:"flex",alignItems:"flex-start",gap:14}}>
-        <div style={{position:"relative",flexShrink:0}}>
-          <img src="/authors/admin/avatar.png" alt={p.name.en}
-            style={{width:76,height:76,borderRadius:14,objectFit:"cover",display:"block",border:"1px solid var(--border)"}} />
-          <span style={{position:"absolute",right:-4,bottom:-4,display:"flex",alignItems:"center",justifyContent:"center",width:20,height:20,borderRadius:"50%",background:"var(--bg-2)",border:"2px solid var(--bg-2)"}}>
-            <PulseDot />
-          </span>
-        </div>
-        <div style={{minWidth:0,paddingTop:2}}>
-          <div style={{fontSize:18,fontWeight:600,letterSpacing:-0.3,lineHeight:1.2}}>{p.name[lang]}</div>
-          <div className="mono" style={{color:"var(--fg-dim)",fontSize:11.5,marginTop:2}}>/{p.handle}</div>
-          <div style={{color:"var(--fg-2)",fontSize:13,marginTop:5}}>{p.role[lang]}</div>
-          <div style={{fontSize:12,color:"var(--fg-dim)",marginTop:2,lineHeight:1.35}}>{p.org[lang]}</div>
-        </div>
-      </div>
-
-      <div className="mission-panel" style={{marginTop:18,padding:"11px 13px",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10}}>
-        <div style={{display:"flex",gap:7,alignItems:"center",marginBottom:7}}>
-          <PulseDot />
-          <span className="mono" style={{fontSize:10,letterSpacing:0.6,textTransform:"uppercase",color:"var(--fg-dim)"}}>{t.mission}</span>
-        </div>
-        <div style={{fontSize:14,color:"var(--fg)",fontWeight:500,lineHeight:1.5}}>{p.mission[lang]}</div>
-      </div>
-
-      <div style={{marginTop:16}}><Label>{t.now}</Label>
-        <ul style={{margin:0,padding:0,listStyle:"none"}}>
-          {p.now[lang].map((n,i) => (
-            <li key={i} style={{padding:"5px 0",borderTop:i===0?"none":"1px dashed var(--border)",fontSize:12.5,display:"flex",gap:8}}>
-              <span style={{color:"var(--accent)",lineHeight:1.5,flexShrink:0}}>▸</span>
-              <span style={{lineHeight:1.45}}>{n}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div style={{marginTop:16}}><Label>{t.interests}</Label>
-        <div style={{display:"flex",flexWrap:"wrap",gap:5}}>
-          {p.interests[lang].map(i => <Chip key={i}>{i}</Chip>)}
-        </div>
-      </div>
-
-      <div style={{marginTop:16}}><Label>{t.status}</Label>
-        <div style={{fontSize:12.5,color:"var(--fg-2)",lineHeight:1.5}}>
-          <div><span className="mono" style={{color:"var(--fg-dim)",marginRight:6,fontSize:11}}>{t.based}</span>{p.location}</div>
-          <div style={{marginTop:4,display:"flex",gap:7,alignItems:"center"}}>
-            <PulseDot /><span style={{fontSize:12}}>{p.status[lang]}</span>
-          </div>
-        </div>
-      </div>
-
-      <div style={{marginTop:16}}><Label>{t.contact}</Label>
-        {LINKS.map((l,i) => (
-          <a key={l.label} href={l.url} target={l.url.startsWith("mailto")?"_self":"_blank"} rel="noopener"
-            style={{display:"flex",alignItems:"center",gap:9,padding:"7px 0",textDecoration:"none",color:"inherit",fontSize:12.5,borderTop:i===0?"none":"1px dashed var(--border)"}}>
-            <Icon name={l.icon} size={14} style={{color:"var(--fg-dim)"}} />
-            <span className="mono" style={{color:"var(--fg-2)",fontSize:11.5}}>{l.label}</span>
-            <span style={{flex:1}} />
-            <span style={{color:"var(--accent)",fontSize:13}} className="link-arrow">→</span>
-          </a>
-        ))}
-      </div>
-
-      <div style={{flex:1}} />
-      <div className="mono" style={{marginTop:20,fontSize:10,color:"var(--fg-dim)",letterSpacing:0.3}}>{T[lang].footer}</div>
-    </aside>
-  );
+  return <header className="site-header">
+    <a className="wordmark" href="/" aria-label={lang === "ja" ? "ホーム" : "Home"}>
+      <span className="site-mark-image" aria-hidden="true" />
+      <span>{PROFILE.name[lang]}</span>
+    </a>
+    <nav className="header-nav" aria-label={lang === "ja" ? "メインナビゲーション" : "Main navigation"}>
+      <a href="#projects">{t.projects}</a><a href="#publications">{t.publications}</a><a href="#about">{lang === "ja" ? "プロフィール" : "About"}</a>
+    </nav>
+    <div className="header-controls">
+      <button aria-label={t.toggle_theme} aria-pressed={theme === "dark"} onClick={() => setTheme(theme === "dark" ? "light" : "dark")}><Icon name={theme === "dark" ? "sun" : "moon"} /></button>
+      <button className="mono" aria-label={t.language} onClick={() => setLang(lang === "en" ? "ja" : "en")}>{lang === "en" ? "JA" : "EN"}</button>
+    </div>
+  </header>;
 }
 
 // ── Section header ────────────────────────────────────────────────────────────
-function SectionHeader({ icon, title, count, href, seeAllLabel }) {
-  return (
-    <div className="section-header" style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
-      {icon && <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",width:26,height:26,borderRadius:7,background:"var(--accent-soft)",color:"var(--accent-text)"}}>
-        <Icon name={icon} size={14} />
-      </span>}
-      <h2 style={{fontSize:16,fontWeight:600,margin:0,letterSpacing:-0.2}}>{title}</h2>
-      <span className="mono" style={{color:"var(--fg-dim)",fontSize:11.5}}>{String(count).padStart(2,"0")}</span>
-      <span style={{flex:1,height:1,background:"var(--border)"}} />
-      {href && <a href={href} className="mono" style={{fontSize:11,color:"var(--fg-dim)",textDecoration:"none",letterSpacing:0.3}}>{seeAllLabel}</a>}
-    </div>
-  );
+function SectionHeader({ title, href, seeAllLabel }) {
+  return <div className="section-header" style={{display:"flex",alignItems:"center",gap:10}}>
+    <h2>{title}</h2>
+    {href && <a href={href} className="mono">{seeAllLabel}</a>}
+  </div>;
 }
 
 // ── Publication card ──────────────────────────────────────────────────────────
-function PubCard({ p, density }) {
-  const pad = density==="compact"?"11px 14px":"15px 18px";
-  return (
-    <a href={p.url} target="_blank" rel="noopener" className="card-hover publication-card"
-      style={{display:"block",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad,textDecoration:"none",color:"inherit"}}>
-      <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
-        <Icon name={p.icon||"paper"} size={13} style={{color:"var(--accent)"}} />
-        <span className="mono" style={{color:"var(--accent)",fontSize:12,fontWeight:600}}>{p.venue}</span>
-        <Chip style={{background:"var(--accent-soft)",color:"var(--accent-text)",borderColor:"transparent"}}>{p.tag}</Chip>
-        <span style={{flex:1}} />
-        <span className="mono" style={{color:"var(--fg-dim)",fontSize:11.5}}>{p.month} {p.year}</span>
-      </div>
-      {/* Title is always shown in English */}
-      <div style={{fontSize:14.5,fontWeight:500,marginTop:8,color:"var(--fg)",lineHeight:1.4}}>{p.title}</div>
-      <div style={{color:"var(--fg-dim)",fontSize:12,marginTop:5,lineHeight:1.5}}>
-        {p.authors.map((a,i) => (
-          <React.Fragment key={a+i}>
-            {i>0&&", "}
-            {a==="Kunihiro Takeoka" ? <strong style={{color:"var(--fg-2)"}}>{a}</strong> : a}
-          </React.Fragment>
-        ))}
-      </div>
-    </a>
-  );
+function PubCard({ p }) {
+  return <a className="research-row" href={p.url}>
+    <span className="research-venue mono">{p.venue.replace(/\s+\d{4}$/, "")}<small>{p.year}</small></span>
+    <span className="research-content"><h3>{p.title}</h3><span className="research-authors">{p.authors.map((a,i) => <React.Fragment key={a+i}>{i > 0 && ", "}{a === PROFILE.name.en ? <strong>{a}</strong> : a}</React.Fragment>)}</span></span>
+    <span className="row-arrow" aria-hidden="true">↗</span>
+  </a>;
 }
 
-// ── Project card ──────────────────────────────────────────────────────────────
-function ProjectCard({ p, lang, density }) {
-  const pad = density==="compact"?"11px 14px":"13px 16px";
-  const inner = (
-    <>
-      <div style={{display:"flex",gap:10,alignItems:"center"}}>
-        <span style={{display:"inline-flex",alignItems:"center",justifyContent:"center",width:28,height:28,borderRadius:7,background:"var(--accent-soft)",color:"var(--accent-text)",flexShrink:0}}>
-          <Icon name={p.icon||"hammer"} size={14} />
-        </span>
-        <span className="mono" style={{color:"var(--fg-dim)",fontSize:11.5}}>{p.year}</span>
-        <span style={{fontSize:14,fontWeight:500}}>{lang==="en"?p.title_en:p.title_ja}</span>
-      </div>
-      <div style={{color:"var(--fg-dim)",fontSize:12.5,marginTop:6,lineHeight:1.45}}>{lang==="en"?p.desc_en:p.desc_ja}</div>
-      <div style={{marginTop:7}}><Chip>{p.tag}</Chip></div>
-    </>
-  );
-  return p.url
-    ? <a href={p.url} target="_blank" rel="noopener" className="card-hover project-tile"
-        style={{display:"block",background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad,textDecoration:"none",color:"inherit"}}>{inner}</a>
-    : <div className="project-tile" style={{background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,padding:pad}}>{inner}</div>;
+function ProjectCard({ p, lang }) {
+  const content = <>
+    <div className="project-meta mono"><span>{p.year} / {p.tag}</span><Icon name={p.icon || "code"} size={18} /></div>
+    <h3>{lang === "en" ? p.title_en : p.title_ja}</h3>
+    <p>{lang === "en" ? p.desc_en : p.desc_ja}</p>
+    <span className="project-open">{lang === "en" ? "Explore project" : "プロジェクトを見る"}<span aria-hidden="true">↗</span></span>
+  </>;
+  return p.url ? <a className="project-tile" href={p.url} target={p.url.startsWith("http") ? "_blank" : undefined} rel="noopener">{content}</a> : <div className="project-tile">{content}</div>;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
-function Main({ lang, density }) {
+function Main({ lang }) {
   const t = T[lang];
-  return (
-    <main id="main-content" tabIndex={-1} className="portfolio-main">
-      <header className="portfolio-intro">
-        <div className="intro-eyebrow mono">{t.eyebrow}</div>
-        <h1>{t.heading}</h1>
-        <p className="intro-description">{t.sub}</p>
-        <nav className="intro-actions" aria-label={lang==="ja"?"ページ内ナビゲーション":"On this page"}>
-          <a className="primary-action" href="#publications">{t.explore}<span aria-hidden="true">↗</span></a>
-          <a className="secondary-action" href="#projects">{t.jump_projects}<span aria-hidden="true">↓</span></a>
+  const ja = lang === "ja";
+  const featured = PROJECTS[0];
+  return <main id="main-content" tabIndex={-1}>
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="hero-portrait"><img src="/authors/admin/avatar.png" alt={PROFILE.name[lang]} width="128" height="128" /></div>
+      <div className="hero-bio">
+        <p className="hero-eyebrow">Researcher / Engineer <span>· {PROFILE.location}</span></p>
+        <h1 id="hero-title">{PROFILE.name[lang]}</h1>
+        <p className="hero-role">{PROFILE.role[lang]} · NEC</p>
+        <p className="hero-description">{ja ? "人とAIの間の研究をし、社会で使えるシステムにしています。" : "I study how people interact with AI."}</p>
+        <ul className="hero-specialties" aria-label={ja ? "専門分野" : "Research areas"}>{(ja ? ["自然言語処理", "情報検索", "Human–Computer Interaction"] : ["Natural language processing", "Information retrieval", "Human–Computer Interaction"]).map(area => <li key={area}>{area}</li>)}</ul>
+        <p className="hero-mission">{ja ? "やりたい仕事に、集中できる世界に。" : "More room for work you love."}</p>
+        <nav className="hero-links" aria-label={ja ? "研究活動と連絡先" : "Research and contact"}>
+          <a className="hero-primary" href="#publications">{t.publications}<span aria-hidden="true">↓</span></a>
+          {LINKS.filter(l => ["scholar","github","email"].includes(l.label)).map(l => <a key={l.label} href={l.url} target={l.url.startsWith("mailto") ? undefined : "_blank"} rel="noopener"><Icon name={l.icon} size={17}/>{l.label === "scholar" ? "Google Scholar" : l.label === "github" ? "GitHub" : ja ? "連絡先" : "Email"}<span aria-hidden="true">↗</span></a>)}
         </nav>
-      </header>
+      </div>
+    </section>
 
-      <section id="publications">
-        <SectionHeader icon="paper" title={t.publications} count={PUBLICATIONS.length}
-          href="/publication/" seeAllLabel={t.see_all} />
-        <div style={{display:"grid",gap:8}}>
-          {PUBLICATIONS.slice(0, 5).map(p => <PubCard key={p.id} p={p} density={density} />)}
-        </div>
-      </section>
+    <section className="featured-work" aria-labelledby="featured-title">
+      <div className="featured-label">{ja ? "現在の仕事" : "Current work"}</div>
+      <div className="featured-copy">
+        <h2 id="featured-title">NEC cotomi Agent</h2>
+        <p>{ja ? "プロダクトマネージャーとして、デジタル業務の継続的な自動化を実現するエージェントの開発に取り組んでいます。" : "As Product Manager, I work on agent technology for the continuous automation of digital operations."}</p>
+        <div className="featured-links"><a href={featured.url} target="_blank" rel="noopener">{ja ? "NECの発表" : "NEC announcement"}<span aria-hidden="true">↗</span></a><a href="/publication/oyamada-2026-cais/">{ja ? "関連論文" : "Related publication"}<span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
 
-      <section id="projects">
-        <SectionHeader icon="hammer" title={t.projects} count={PROJECTS.length} />
-        <div className="project-grid">
-          {PROJECTS.map(p => <ProjectCard key={p.id} p={p} lang={lang} density={density} />)}
-        </div>
-      </section>
+    <section id="projects" className="content-section">
+      <SectionHeader title={ja ? "主なプロジェクト" : "Selected projects"} href="/project/" seeAllLabel={ja ? "すべてのプロジェクト →" : "All projects →"} />
+      <p className="section-description">{ja ? "NECでの主な取り組みです。個人制作や過去の取り組みは、プロジェクト一覧にまとめています。" : "Selected work at NEC. Personal projects and earlier work are in the full archive."}</p>
+      <div className="project-grid">{PROJECTS.slice(0,3).map(p => <ProjectCard key={p.id} p={p} lang={lang} />)}</div>
+    </section>
 
-      <section style={{marginTop:32}}>
-        <SectionHeader icon="briefcase" title={t.experience} count={EXPERIENCE.length} />
-        <div style={{background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,overflow:"hidden"}}>
-          {EXPERIENCE.map((e,i) => {
-            const current = !e.end;
-            const row = (
-              <div key={i} className="experience-row" style={{padding:"13px 18px",borderTop:i===0?"none":"1px solid var(--border-2)",display:"grid",gridTemplateColumns:"140px 1fr",gap:16,alignItems:"start"}}>
-                <div className="mono" style={{color:"var(--fg-dim)",fontSize:11.5,display:"flex",alignItems:"center",gap:7}}>
-                  {current ? <PulseDot /> : <Icon name="briefcase" size={11} style={{color:"var(--fg-dim)"}} />}
-                  <span>{e.start} → {e.end||t.present}</span>
-                </div>
-                <div>
-                  <div style={{fontWeight:500,fontSize:14}}>
-                    {lang==="en"?e.title_en:e.title_ja}
-                    <span style={{color:"var(--fg-dim)",fontWeight:400}}> · {e.org}</span>
-                  </div>
-                  <div style={{color:"var(--fg-dim)",fontSize:12.5,marginTop:3,lineHeight:1.45}}>{lang==="en"?e.notes_en:e.notes_ja}</div>
-                </div>
-              </div>
-            );
-            return e.url
-              ? <a key={i} href={e.url} target="_blank" rel="noopener" style={{textDecoration:"none",color:"inherit",display:"block"}} className="card-hover">{row}</a>
-              : <React.Fragment key={i}>{row}</React.Fragment>;
-          })}
-        </div>
-      </section>
+    <section id="publications" className="content-section research-section">
+      <SectionHeader title={ja ? "最近の論文" : "Recent publications"} href="/publication/" seeAllLabel={ja ? "すべての論文 →" : "All publications →"} />
+      <div>{PUBLICATIONS.slice(0,5).map(p => <PubCard key={p.id} p={p} />)}</div>
+    </section>
 
-      <section style={{marginTop:32}}>
-        <SectionHeader icon="grad" title={t.education} count={PROFILE.education.length} />
-        <div style={{background:"var(--bg-card)",border:"1px solid var(--border)",borderRadius:10,overflow:"hidden"}}>
-          {PROFILE.education.map((e,i) => (
-            <div key={i} style={{padding:"11px 18px",borderTop:i===0?"none":"1px solid var(--border-2)",display:"grid",gridTemplateColumns:"80px 1fr",gap:16,alignItems:"center"}}>
-              <div className="mono" style={{color:"var(--fg-dim)",fontSize:11.5,display:"flex",alignItems:"center",gap:7}}>
-                <Icon name="grad" size={11} style={{color:"var(--fg-dim)"}} />
-                <span>{e.year}</span>
-              </div>
-              <div style={{fontSize:13.5}}>
-                {lang==="en"?e.degree_en:e.degree_ja}
-                <span style={{color:"var(--fg-dim)"}}> · {lang==="en"?e.school_en:e.school_ja}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
+    <section id="about" className="content-section about-section">
+      <div className="about-intro">
+        <div className="mono about-label">{ja ? "プロフィール" : "ABOUT ME"}</div>
+        <h2>{PROFILE.name[lang]}</h2><p className="about-role">{PROFILE.role[lang]}<br />{PROFILE.org[lang]}</p>
+        <div className="interest-list">{PROFILE.interests[lang].map(i => <Chip key={i}>{i}</Chip>)}</div>
+        <div className="contact-links">{LINKS.map(l => <a href={l.url} key={l.label} aria-label={l.label} target={l.url.startsWith("mailto") ? undefined : "_blank"} rel="noopener"><Icon name={l.icon} size={18} /><span>{l.label}</span></a>)}</div>
+      </div>
+      <div className="career"><h3>{t.experience}</h3>{EXPERIENCE.map((e,i) => <div className="career-row" key={i}>
+        <div className="mono career-date">{e.start} — {e.end || t.present}</div>
+        <div><h4>{e.url ? <a href={e.url} target="_blank" rel="noopener">{ja ? e.title_ja : e.title_en}<span aria-hidden="true"> ↗</span></a> : (ja ? e.title_ja : e.title_en)}</h4><span className="career-org">{e.org}</span><p>{ja ? e.notes_ja : e.notes_en}</p></div>
+      </div>)}<h3 className="education-title">{t.education}</h3>{PROFILE.education.map(e => <div className="career-row" key={e.year}><div className="mono career-date">{e.year}</div><div><h4>{ja ? e.degree_ja : e.degree_en}</h4><p>{ja ? e.school_ja : e.school_en}</p></div></div>)}</div>
+    </section>
+    <footer className="page-footer"><span>© {new Date().getFullYear()} {PROFILE.name.en}</span><a href="#main-content">{ja ? "ページの先頭へ ↑" : "Back to top ↑"}</a></footer>
+  </main>;
 }
 
 // ── App ───────────────────────────────────────────────────────────────────────
@@ -363,8 +210,8 @@ function App() {
   return (
     <div className="layout">
       <a className="skip-link" href="#main-content">{lang==="ja"?"本文へ移動":"Skip to content"}</a>
-      <Sidebar lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
-      <Main lang={lang} density="normal" />
+      <SiteHeader lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
+      <Main lang={lang} />
     </div>
   );
 }
